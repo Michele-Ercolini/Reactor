@@ -1,3 +1,8 @@
+.body{
+    height: calc(100vh - 12vh);
+    
+}
+
 .fancy {
     background-color: transparent;
     border: 2px solid var(--accent2Color);

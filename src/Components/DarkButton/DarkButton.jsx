@@ -1,10 +1,14 @@
+import { useContext } from "react"
 import classes from "./DarkButton.module.css"
+import { DarkContext } from "../../Context/Context"
 
 export default function DarkButton() {
+
+    const {handleDark} = useContext(DarkContext);
     return (
         <div>
             <label htmlFor="switch" className={classes.toggle}>
-                <input type="checkbox" className={classes.input} id="switch" />
+                <input type="checkbox" className={classes.input} id="switch" onChange={handleDark}/>
                 <div className={`${classes.icon} ${classes["icon--moon"]}`}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

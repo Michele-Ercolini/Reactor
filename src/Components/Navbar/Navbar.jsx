@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
 import { Link } from "react-router-dom";
 import routes from "../../routes";
 import classes from './Navbar.module.css';
@@ -7,6 +7,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import Searchbar from "../Searchbar/Searchbar";
 import Logo from './../../../public/media/color_logo_no_background.png';
 import DarkButton from "../DarkButton/DarkButton";
+import { DarkContext } from "../../Context/Context";
 
 export default function Navbar() {
 
@@ -15,6 +16,8 @@ export default function Navbar() {
     const showNavbar = () => {
         navRef.current.classList.toggle(`${classes.responsive_nav}`);
     }
+
+    const { dark } = useContext(DarkContext);
 
     return (
         <header className="sticky-top">

@@ -8,6 +8,7 @@ export default function Homepage() {
     const games = useLoaderData();
     return (
         <>
+        <div className={classes.body}>
             <Header />
             <SwiperHome games={games} />
             <div className="d-flex justify-content-center justify-content-md-end me-md-5 mb-3">
@@ -18,6 +19,7 @@ export default function Homepage() {
                     <span className={classes.bottom_key_2}></span>
                 </Link>
             </div>
+        </div>
         </>
     )
 }

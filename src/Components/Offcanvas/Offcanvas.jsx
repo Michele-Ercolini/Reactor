@@ -15,17 +15,10 @@ export default function Offcanvas() {
 
     return (
         <>
-            <div className="container">
-                <div className="row mx-4 mt-2">
-                    <div className="col-12">
-                        <button className={classes.sign} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            <IoIosArrowForward color={"var(--accent2Color)"} size="2rem" />
-                            {/* <div className={classes.text}>Generi</div> Si dovrebbe vedere sull'hover, ma per smartphone/tablet risulta inutile */}
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+            <button className={classes.sign} type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <IoIosArrowForward color={"var(--accent2Color)"} size="2rem" />
+                {/* <div className={classes.text}>Generi</div> Si dovrebbe vedere sull'hover, ma per smartphone/tablet risulta inutile */}
+            </button>
             <div className={`${classes.offcanvas} offcanvas offcanvas-start`} data-bs-scroll="true" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header pb-0 d-flex justify-content-between">
                     <h2 className={classes.sidebar_title}>Generi</h2>
