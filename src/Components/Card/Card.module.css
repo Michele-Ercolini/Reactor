@@ -1,9 +1,15 @@
-.card {
+.card_dark {
     height: 254px;
     background-image: linear-gradient(163deg, var(--accent2Color) 0%, var(--secondaryColor) 100%);
     border-radius: 20px;
     transition: all .3s;
-    perspective: 500px;
+}
+
+.card_light {
+    height: 254px;
+    background-image: linear-gradient(163deg, var(--accent2Color) 0%, var(--primaryColor) 100%);
+    border-radius: 20px;
+    transition: all .3s;
 }
 
 .card2 {
@@ -18,7 +24,11 @@
     transform: scale(0.96);
 }
 
-.card:hover {
+.card_dark:hover {
+    box-shadow: 0px 0px 30px 1px var(--accent2Color);
+}
+
+.card_light:hover {
     box-shadow: 0px 0px 30px 1px var(--accent2Color);
 }
 

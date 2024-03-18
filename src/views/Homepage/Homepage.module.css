@@ -1,8 +1,3 @@
-.body{
-    height: calc(100vh - 12vh);
-    
-}
-
 .fancy {
     background-color: transparent;
     border: 2px solid var(--accent2Color);
@@ -53,7 +48,6 @@
     top: -2px;
     left: 0.625rem;
     position: absolute;
-    background: var(--primaryColor);
     transition: width 0.5s ease-out, left 0.3s ease-out;
 }
 
@@ -63,7 +57,6 @@
     right: 1.875rem;
     bottom: -2px;
     position: absolute;
-    background: var(--primaryColor);
     transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
@@ -73,7 +66,6 @@
     right: 0.625rem;
     bottom: -2px;
     position: absolute;
-    background: var(--primaryColor);
     transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 

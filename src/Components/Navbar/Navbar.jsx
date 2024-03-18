@@ -20,7 +20,7 @@ export default function Navbar() {
     const { dark } = useContext(DarkContext);
 
     return (
-        <header className="sticky-top">
+        <header className={"sticky-top " + (dark ? "dark" : "light")}>
             <Link className="navbar-brand ms-5" to={routes.home}><img src={Logo} className={classes.navLogo + " img-fluid"} alt="Logo" /></Link>
             <div className="d-flex align-items-center">
                 <nav ref={navRef}>

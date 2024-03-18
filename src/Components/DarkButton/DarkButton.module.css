@@ -1,12 +1,11 @@
 .toggle {
-    background-color: var(--primaryColor);
     width: 56px;
     height: 56px;
     border-radius: 50%;
     display: grid;
     place-items: center;
     cursor: pointer;
-    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1); */
     line-height: 1;
 }
 

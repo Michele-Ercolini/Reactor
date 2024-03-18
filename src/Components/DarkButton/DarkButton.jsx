@@ -5,9 +5,11 @@ import { DarkContext } from "../../Context/Context"
 export default function DarkButton() {
 
     const {handleDark} = useContext(DarkContext);
+
+    const {dark} = useContext(DarkContext);
     return (
         <div>
-            <label htmlFor="switch" className={classes.toggle}>
+            <label htmlFor="switch" className={classes.toggle + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                 <input type="checkbox" className={classes.input} id="switch" onChange={handleDark}/>
                 <div className={`${classes.icon} ${classes["icon--moon"]}`}>
                     <svg

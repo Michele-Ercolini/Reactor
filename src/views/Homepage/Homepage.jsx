@@ -3,23 +3,27 @@ import Header from "../../Components/Header/Header";
 import SwiperHome from "../../Components/SwiperHome/SwiperHome";
 import routes from "../../routes";
 import classes from "./Homepage.module.css"
+import { useContext } from "react";
+import { DarkContext } from "../../Context/Context";
 export default function Homepage() {
 
     const games = useLoaderData();
+
+    const { dark } = useContext(DarkContext);
     return (
         <>
-        <div className={classes.body}>
-            <Header />
-            <SwiperHome games={games} />
-            <div className="d-flex justify-content-center justify-content-md-end me-md-5 mb-3">
-                <Link to={routes.games} className={classes.fancy}>
-                    <span className={classes.top_key}></span>
-                    <span className={classes.text}>Vedi tutti i giochi</span>
-                    <span className={classes.bottom_key_1}></span>
-                    <span className={classes.bottom_key_2}></span>
-                </Link>
+            <div className={classes.body}>
+                <Header />
+                <SwiperHome games={games} />
+                <div className="d-flex justify-content-center justify-content-md-end me-md-5 mb-3">
+                    <Link to={routes.games} className={classes.fancy}>
+                        <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                        <span className={classes.text}>Vedi tutti i giochi</span>
+                        <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                        <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                    </Link>
+                </div>
             </div>
-        </div>
         </>
     )
 }

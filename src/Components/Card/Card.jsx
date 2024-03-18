@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import classes from "./Card.module.css"
+import { DarkContext } from "../../Context/Context";
 
 export default function Card({ game }) {
+
+    const { dark } = useContext(DarkContext);
 
     const [hover, setHover] = useState(false);
 
@@ -13,7 +16,7 @@ export default function Card({ game }) {
 
     return (
         <Link to={`/game/${game.id}`}>
-            <div className={classes.card}
+            <div className={(dark ? classes.card_dark : classes.card_light)}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}>
                 <div className={classes.card2}>

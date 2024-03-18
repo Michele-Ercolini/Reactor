@@ -12,10 +12,6 @@
     display: none; /* Nascondi la scrollbar */
 }
 
-.sidebar_title{
-    color: var(--secondaryColor);
-}
-
 
 /* .sidebar_item::after{
     content: "";

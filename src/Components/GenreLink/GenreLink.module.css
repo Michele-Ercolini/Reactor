@@ -1,7 +1,6 @@
 .sidebar_item {
     position: relative;
     text-decoration: none;
-    color: var(--secondaryColor);
     font-size: 1.3rem;
     z-index: 1;
 }

@@ -1,9 +1,12 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import classes from "./CardSwiperHome.module.css"
+import { DarkContext } from "../../Context/Context";
 
 export default function CardSwiperHome({ game }) {
+
+    const { dark } = useContext(DarkContext);
 
     const [hover, setHover] = useState(false);
     const videoRef = useRef(null);
@@ -29,7 +32,7 @@ export default function CardSwiperHome({ game }) {
 
     return (
         <Link to={`/game/${game.id}`}>
-            <div className={classes.card}
+            <div className={(dark ? classes.card_dark : classes.card_light)}
                 onMouseEnter={handleHover}
                 onMouseLeave={handleMouseLeave}>
                 <div className={classes.card2}>
