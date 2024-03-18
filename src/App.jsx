@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-    <DarkContextProvider>
-      <RouterProvider router={router} />
-    </DarkContextProvider>
+      <DarkContextProvider>
+        <RouterProvider router={router} />
+      </DarkContextProvider>
     </>
   )
 }

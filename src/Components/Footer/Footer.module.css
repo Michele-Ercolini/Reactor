@@ -1,0 +1,7 @@
+.border{
+    border-bottom: 2px solid var(--accent2Color);
+}
+
+.space{
+    height: 10vh;
+}
