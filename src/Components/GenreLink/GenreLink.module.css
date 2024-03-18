@@ -1,0 +1,91 @@
+.sidebar_item {
+    position: relative;
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+.sidebar_item:nth-child(1):hover~span {
+    top: 3.6rem;
+}
+
+.sidebar_item:nth-child(2):hover~span {
+    top: 5.6rem;
+}
+
+.sidebar_item:nth-child(3):hover~span {
+    top: 7.6rem;
+}
+
+.sidebar_item:nth-child(4):hover~span {
+    top: 9.5rem;
+}
+
+.sidebar_item:nth-child(5):hover~span {
+    top: 11.5rem;
+}
+
+.sidebar_item:nth-child(6):hover~span {
+    top: 13.5rem;
+}
+
+.sidebar_item:nth-child(7):hover~span {
+    top: 15.3rem;
+}
+
+.sidebar_item:nth-child(8):hover~span {
+    top: 17.3rem;
+}
+
+.sidebar_item:nth-child(9):hover~span {
+    top: 19.3rem;
+}
+
+.sidebar_item:nth-child(10):hover~span {
+    top: 21.2rem;
+}
+
+.sidebar_item:nth-child(11):hover~span {
+    top: 23.2rem
+}
+
+.sidebar_item:nth-child(12):hover~span {
+    top: 25.2rem;
+}
+
+.sidebar_item:nth-child(13):hover~span {
+    top: 27rem
+}
+
+.sidebar_item:nth-child(14):hover~span {
+    top: 29rem;
+}
+
+.sidebar_item:nth-child(15):hover~span {
+    top: 31rem;
+}
+
+.sidebar_item:nth-child(16):hover~span {
+    top: 32.9rem;
+}
+
+.sidebar_item:nth-child(17):hover~span {
+    top: 34.9rem;
+}
+
+.sidebar_item:nth-child(18):hover~span {
+    top: 36.9rem;
+}
+
+.sidebar_item:nth-child(19):hover~span {
+    top: 38.8rem;
+}
+
+.img_custom{
+    border: 1px solid var(--accent2Color);
+    border-radius: 50%;
+    width: 2vw;
+    height: 4vh;
+    margin-right: 2rem;
+}

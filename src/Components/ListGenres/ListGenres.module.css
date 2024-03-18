@@ -1,0 +1,16 @@
+.sidebar_custom {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0; */
+}
+
+.sidebar_custom span {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    width: 100%;
+    height: 2.2rem;
+    background: linear-gradient(45deg, var(--primaryColor), var(--accent2Color));
+    transition: 0.3s;
+}
+

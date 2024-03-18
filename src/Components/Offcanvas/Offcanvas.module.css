@@ -1,0 +1,32 @@
+.offcanvas{
+    background-color: var(--primaryColor)!important;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar_title{
+    color: var(--secondaryColor);
+}
+
+
+
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px var(--accent2Color);
+    background-color: var(--primaryColor);
+}
+

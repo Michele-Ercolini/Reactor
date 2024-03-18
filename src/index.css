@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,500;1,500&family=Just+Me+Again+Down+Here&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primaryColor: #0F0F0F;
+  --secondaryColor: #F7F7F7;
+  --accentColor: #6CCFF6;
+  --accent2Color: #947B57;
+  --accent3Color: #;
+}
+
+* {
+  font-family: "Josefin Slab", serif;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  font-family: "Quantico", sans-serif;
+}
+
+h6 {
+  font-family: "Just Me Again Down Here", cursive;
+}
+
+body {
+  background-color: var(--primaryColor);
+}
+
+.text-primaryColor {
+  color: var(--primaryColor);
+}
+
+.bg-primaryColor {
+  background-color: var(--primaryColor);
+}
+
+.text-secondaryColor {
+  color: var(--secondaryColor);
+}
+
+.bg-secondaryColor {
+  background-color: var(--secondaryColor);
+}
+
+.text-accentColor {
+  color: var(--accenturColor);
+}
+
+.bg-accentColor {
+  background-color: var(--accenturColor);
+}
+
+.text-accentColor2 {
+  color: var(--accenturColor2);
+}
+
+.bg-accentColor2 {
+  background-color: var(--accenturColor2);
+}
+
+/* Searchbar */
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.searchBox {
+  position: relative;
+  height: 7vh;
+  width: 500px;
+  margin-right: 5%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.searchBox.active {
+  width: 500px;
+}
+
+.searchBox input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 0 60px 0 30px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.searchBox input.active {
+  opacity: 1;
+}
+
+.searchBox input.active:focus {
+  border: 2px solid var(--accent2Color);
+}
+
+.searchBox .searchBtn {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 1;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  color: var(--accent2Color);
+  background: var(--primaryColor);
+  line-height: 60px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.searchBox .searchBtn.active {
+  right: 1px;
+  height: 50px;
+  width: 50px;
+  color: var(--primaryColor);
+  background: var(--accent2Color);
+  line-height: 50px;
+  font-size: 20px;
+  transform: translateY(-50%) rotate(360deg);
+
+}
+
+.searchBox .cancelBtn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--accent2Color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.searchBox .cancelBtn.active {
+  right: -30px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+@media screen and (max-width: 1024px) {
+
+  .searchBox .searchBtn,
+  .searchBox .cancelBtn {
+    right: calc(50% - 30px)
+  }
+
+  .searchBox .cancelBtn.active {
+    right: calc(20% - 30px);
+  }
+
+  .searchBox {
+    margin-right: 0px;
+  }
+
+  .searchBox .searchBtn.active {
+    right: calc(25% - 30px);
+  }
+
+  .searchBox input {
+    width: 50%;
+    margin-right: 10%;
+  }
+}
+
+/* Swiper */
+
+.swiper {
+  width: 100%;
+  padding: 3rem;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 60vw;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Homepage Button */
+
