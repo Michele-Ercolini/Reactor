@@ -8,6 +8,7 @@ import GameView from "./views/GameView/GameView";
 import AuthLayout from "./Components/AuthLayout/AuthLayout";
 import Signup from "./views/Auth/Signup/Signup";
 import Login from "./views/Auth/Login/Login";
+import Profile from "./views/Auth/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: routes.login,
                 element: <Login />
+            },
+            {
+                path: routes.profile,
+                element: <Profile/>
             }
         ]
     }

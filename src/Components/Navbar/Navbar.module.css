@@ -47,6 +47,17 @@ header .nav_btn {
     display: none;
 }
 
+.username {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    top: 0.5rem;
+    right: 2rem;
+    color: var(--accent2Color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1024px) {
     header .nav_btn {
         visibility: visible;
@@ -85,6 +96,11 @@ header .nav_btn {
         font-size: 1.5rem;
     }
 
+    .username{
+        top: 65%;
+        right: 25vw;
+        width: 50vw;
+    }
 
 
 }

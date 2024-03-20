@@ -9,6 +9,8 @@ export default function DropdownUser({ removeNavbar }) {
 
     const { dark } = useContext(DarkContext);
 
+    const { profile, signOut } = useContext(UserContext);
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -20,22 +22,29 @@ export default function DropdownUser({ removeNavbar }) {
         removeNavbar();
     }
 
-    const { user, signOut } = useContext(UserContext);
+    const handleSignOut = ()=>{
+        signOut();
+        handleDropdown();
+    }
+
 
     return (
-        <div className={classes.dropdown + " mx-xl-3"}>
+        <div className={classes.dropdown + " ms-lg-5"}>
             <a className={classes.dropbtn} onClick={toggleDropdown}>
                 <FaRegUserCircle size="2rem" color="var(--accent2Color)" />
             </a>
             {isDropdownOpen &&
                 <div className={classes.dropdown_content}>
-                    {!user ?
+                    {!profile ?
                         <>
                             <Link to={routes.login} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Accedi</Link>
                             <Link to={routes.signup} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Registrati</Link>
                         </>
                         :
-                        <Link className={(dark ? " dark" : " light")} onClick={()=>signOut()}>Logout</Link>
+                        <>
+                        <Link to={routes.profile} className={(dark ? " dark" : " light")}>Profile</Link>
+                        <Link className={(dark ? " dark" : " light")} onClick={handleSignOut}>Logout</Link>
+                        </>
                     }
                 </div>
             }

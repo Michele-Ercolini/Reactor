@@ -7,7 +7,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import Searchbar from "../Searchbar/Searchbar";
 import Logo from './../../../public/media/color_logo_no_background.png';
 import DarkButton from "../DarkButton/DarkButton";
-import { DarkContext } from "../../Contexts/Contexts";
+import { DarkContext, UserContext } from "../../Contexts/Contexts";
 import DropdownUser from "../DropdownUser/DropdownUser"
 
 export default function Navbar() {
@@ -24,17 +24,20 @@ export default function Navbar() {
 
     const { dark } = useContext(DarkContext);
 
+    const { profile } = useContext(UserContext);
+
     return (
         <header className={"sticky-top " + (dark ? "dark" : "light")}>
             <Link className="navbar-brand ms-5" to={routes.home}><img src={Logo} className={classes.navLogo + " img-fluid"} alt="Logo" /></Link>
             <div className="d-flex align-items-center">
                 <nav ref={navRef} className={(dark ? "dark" : "light")}>
+                    {profile && <h6 className={classes.username}>{profile.username}</h6>}
                     <Searchbar />
                     <DarkButton />
-                    <DropdownUser removeNavbar={removeNavbar} />
-                    <Link>
+                    <div className="ms-lg-5">
                         <RiShoppingCartLine size="1.5rem" color="var(--accent2Color)" />
-                    </Link>
+                    </div>
+                    <DropdownUser removeNavbar={removeNavbar} />
                     <button className={`${classes.nav_btn} ${classes.nav_close_btn}`} onClick={showNavbar}>
                         <FaTimes color={"var(--accent2Color)"} />
                     </button>

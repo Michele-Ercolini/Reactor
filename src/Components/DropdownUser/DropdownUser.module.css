@@ -4,19 +4,19 @@
 }
 
 .dropbtn {
-    padding: 1.5rem;
     border: none;
     cursor: pointer;
 }
 
 .dropdown_content {
     position: absolute;
+    width: max-content;
     box-shadow: 0px 8px 16px 0px var(--accent2Color);
     z-index: 1;
     transition: .3s;
     border-radius: 4px;
-    top: 3vh; 
-    left: 0;
+    top: 4vh;
+    right: -1.5rem;
 }
 
 .dropdown_content a {
@@ -30,12 +30,17 @@
 
 .dropdown_content a:hover {
     background-color: var(--accent2Color)
-    
 }
 
 @media (max-width: 1024px) {
     .dropdown_content {
         top: 0;
         left: 100%;
+    }
+
+    .username {
+        width: 20vw;
+        top: 300%;
+        left: -50%;
     }
 }

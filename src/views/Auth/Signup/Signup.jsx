@@ -15,12 +15,30 @@ export default function Signup() {
     const [form, setForm] = useState(
         {
             email: '',
-            password: ''
+            password: '',
+            options: {
+                data: {
+                    first_name: '',
+                    last_name: '',
+                    username: ''
+                }
+            }
         }
     )
 
     const handleChange = (e) => {
-        setForm((prev) => ({ ...prev, [e.target.name] : e.target.value }));
+        setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    }
+
+    const profileHandleChange = (e) => {
+        setForm((prev) => (
+            {
+                ...prev,
+                options: {
+                    data: { ...prev.options.data, [e.target.name]: e.target.value }
+                }
+            }
+        ))
     }
 
     const handleSubmit = async (e) => {
@@ -31,15 +49,15 @@ export default function Signup() {
 
     return (
         <form className={classes.wrapper} onSubmit={handleSubmit}>
-            <h1 className='text-center'>Registrati</h1>
+            <h1 className='text-center'>SignUp</h1>
             <div className={classes.inputBox}>
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Nome' />
+                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Nome' name='first_name' onChange={profileHandleChange} />
             </div>
             <div className={classes.inputBox}>
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Cognome' />
+                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Cognome' name='last_name' onChange={profileHandleChange} />
             </div>
             <div className={classes.inputBox}>
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Username' />
+                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Username' name='username' onChange={profileHandleChange} />
             </div>
             <div className={classes.inputBox}>
                 <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="email" required placeholder='Email' name='email' onChange={handleChange} />
@@ -47,7 +65,7 @@ export default function Signup() {
             <div className={classes.inputBox}>
                 <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="password" required placeholder='Password' name='password' onChange={handleChange} />
             </div>
-            <button className={classes.btn_custom + (dark ? ' text-secondaryColor' : ' text-primaryColor')}></button>
+            <button className={classes.btn_custom + (dark ? ' text-secondaryColor' : ' text-primaryColor')}>Registrati</button>
             <div className={classes.auth}>
                 <p className='text-center'>Sei già registrato?<Link className={classes.link} to={routes.login}>Login</Link></p>
             </div>
