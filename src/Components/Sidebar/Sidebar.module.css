@@ -1,11 +1,12 @@
 .wrapper{
     height: calc(100vh - 12vh);
-    width: 21%;
+    width: 17%;
     position: fixed;
     top: 12vh;
     left: 0;
     box-shadow: 0px 2px 5px var(--accent2Color);
     overflow-y: auto;
+    transition: all .5s;
 }
 
 .wrapper::-webkit-scrollbar {

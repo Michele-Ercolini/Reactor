@@ -8,7 +8,7 @@ export default function GenreView() {
     const slug = useParams().slug;
     return (
         <>
-            <Header title={`Genere: ${slug == 'role-playing-games-rpg' ? 'RPG' : slug.slice(0, 1).toUpperCase() + slug.slice(1)}`}></Header>
+            <Header title={`Genere: ${slug == 'role-playing-games-rpg' ? 'RPG' : (slug == 'massively-multiplayer' ? 'Multiplayer' : slug.slice(0, 1).toUpperCase() + slug.slice(1))}`}></Header>
             <ListGames games={games} />
         </>
     )

@@ -5,11 +5,14 @@ import Homepage, { gamesLoader } from "./views/Homepage/Homepage";
 import GenreView, { gamesByGenreLoader } from "./views/GenreView/GenreView";
 import GamesView from "./views/GamesView/GamesView";
 import GameView from "./views/GameView/GameView";
+import AuthLayout from "./Components/AuthLayout/AuthLayout";
+import Signup from "./views/Auth/Signup/Signup";
+import Login from "./views/Auth/Login/Login";
 
 const router = createBrowserRouter([
     {
         path: routes.home,
-        element: <Layout/>,
+        element: <Layout />,
         children: [
             {
                 path: routes.home,
@@ -27,8 +30,22 @@ const router = createBrowserRouter([
             },
             {
                 path: routes.genre,
-                element: <GenreView/>,
+                element: <GenreView />,
                 loader: gamesByGenreLoader
+            }
+        ]
+    },
+    {
+        path: routes.auth,
+        element: <AuthLayout />,
+        children: [
+            {
+                path: routes.signup,
+                element: <Signup />
+            },
+            {
+                path: routes.login,
+                element: <Login />
             }
         ]
     }

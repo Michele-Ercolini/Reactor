@@ -5,3 +5,8 @@
 .space{
     height: 10vh;
 }
+
+p{
+    color: var(--accent2Color)!important;
+    padding: 0 5rem;
+}

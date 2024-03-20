@@ -17,7 +17,7 @@ export default function Sidebar() {
     return (
         <aside className={classes.wrapper + (dark ? ' dark' : ' light')}>
             <div className="ms-3 my-3">
-                <h2 className={classes.sidebar_title}>Generi</h2>
+                <h2 className="mt-3 mb-4 text-center">Generi</h2>
                 <ListGenres genres={genres} />
                 {/* <h2 className={classes.sidebar_title}>Piattaforme</h2>
                 <ListPlatforms platforms={platforms} /> */}

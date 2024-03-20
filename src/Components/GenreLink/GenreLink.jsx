@@ -9,8 +9,8 @@ export default function GenreLink({ genre }) {
     return (
         <>
             <Link className={classes.sidebar_item + (dark ? ' text-secondaryColor' : ' text-primaryColor')} key={genre.id} to={`/genre/${genre.slug}`}>
-                {/* <img className={classes.img_custom} src={genre.image_background} alt="" /> */}
-                {genre.name}
+                <img className={classes.img_custom + " mb-1"} src={genre.image_background} alt="" />
+                {genre.name == 'Massively Multiplayer' ? 'Multiplayer' : genre.name}
             </Link>
         </>
     )

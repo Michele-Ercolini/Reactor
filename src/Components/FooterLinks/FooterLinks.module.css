@@ -1,0 +1,4 @@
+.text_accent2Color{
+    color: var(--accent2Color);
+    font-size: 1.5rem;
+}

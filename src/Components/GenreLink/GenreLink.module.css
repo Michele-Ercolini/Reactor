@@ -1,90 +1,135 @@
 .sidebar_item {
     position: relative;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     z-index: 1;
 }
 
 .sidebar_item:nth-child(1):hover~span {
-    top: 3.6rem;
+    height: 3rem;
+    top: 4.8rem;
 }
 
 .sidebar_item:nth-child(2):hover~span {
-    top: 5.6rem;
+    height: 3rem;
+    top: 7.9rem;
 }
 
 .sidebar_item:nth-child(3):hover~span {
-    top: 7.6rem;
+    height: 3rem;
+    top: 10.9rem;
 }
 
 .sidebar_item:nth-child(4):hover~span {
-    top: 9.5rem;
+    height: 3rem;
+    top: 14rem;
 }
 
 .sidebar_item:nth-child(5):hover~span {
-    top: 11.5rem;
+    height: 3rem;
+    top: 17rem;
 }
 
 .sidebar_item:nth-child(6):hover~span {
-    top: 13.5rem;
+    height: 3rem;
+    top: 20.1rem;
 }
 
 .sidebar_item:nth-child(7):hover~span {
-    top: 15.3rem;
+    height: 3rem;
+    top: 23.1rem;
 }
 
 .sidebar_item:nth-child(8):hover~span {
-    top: 17.3rem;
+    height: 3rem;
+    top: 26.2rem;
 }
 
 .sidebar_item:nth-child(9):hover~span {
-    top: 19.3rem;
+    height: 3rem;
+    top: 29.2rem;
 }
 
 .sidebar_item:nth-child(10):hover~span {
-    top: 21.2rem;
+    height: 3rem;
+    top: 32.3rem;
 }
 
 .sidebar_item:nth-child(11):hover~span {
-    top: 23.2rem
+    height: 3rem;
+    top: 35.3rem
 }
 
 .sidebar_item:nth-child(12):hover~span {
-    top: 25.2rem;
+    height: 3rem;
+    top: 38.4rem;
 }
 
 .sidebar_item:nth-child(13):hover~span {
-    top: 27rem
+    height: 3rem;
+    top: 41.4rem
 }
 
 .sidebar_item:nth-child(14):hover~span {
-    top: 29rem;
+    height: 3rem;
+    top: 44.5rem;
 }
 
 .sidebar_item:nth-child(15):hover~span {
-    top: 31rem;
+    height: 3rem;
+    top: 47.5rem;
 }
 
 .sidebar_item:nth-child(16):hover~span {
-    top: 32.9rem;
+    height: 3rem;
+    top: 50.6rem;
 }
 
 .sidebar_item:nth-child(17):hover~span {
-    top: 34.9rem;
+    height: 3rem;
+    top: 53.6rem;
 }
 
 .sidebar_item:nth-child(18):hover~span {
-    top: 36.9rem;
+    height: 3rem;
+    top: 56.7rem;
 }
 
 .sidebar_item:nth-child(19):hover~span {
-    top: 38.8rem;
+    height: 3rem;
+    top: 59.7rem;
 }
 
 .img_custom{
     border: 1px solid var(--accent2Color);
     border-radius: 50%;
-    width: 2vw;
-    height: 4vh;
-    margin-right: 2rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 1.5rem;
+}
+
+
+@media screen and (max-width:1650px){
+    .img_custom{
+        margin-right: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .img_custom{
+        margin-right: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 1483px) {
+    .img_custom{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .img_custom{
+        margin-right: 1.5rem;
+        display: inline;
+    }
 }

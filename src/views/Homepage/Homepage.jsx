@@ -16,7 +16,7 @@ export default function Homepage() {
                 <Header />
                 <SwiperHome games={games} />
                 <div className="d-flex justify-content-center justify-content-md-end me-md-5 my-5">
-                    <Link to={routes.games} className={classes.fancy}>
+                    <Link to={routes.games} className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                         <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                         <span className={classes.text}>Vedi tutti i giochi</span>
                         <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>

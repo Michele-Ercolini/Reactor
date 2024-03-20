@@ -4,9 +4,8 @@ header {
     align-items: center;
     height: 12vh;
     padding: 0;
-    background-color: var(--primaryColor);
-    color: var(--secondaryColor);
     box-shadow: 2px 0px 5px var(--accent2Color);
+    transition: all .5s;
 }
 
 
@@ -14,11 +13,12 @@ header {
 nav {
     display: flex;
     align-items: center;
+    transition: all .5s;
 }
 
 nav a {
     margin: 0 1.2rem;
-    color: var(--secondaryColor);
+    
 }
 
 li>ul>li>a {
@@ -29,6 +29,7 @@ li>ul>li>a {
     width: 21vh;
 }
 
+/* Navbar */
 
 header .nav_btn {
     padding: 5px;
@@ -36,7 +37,6 @@ header .nav_btn {
     background: transparent;
     border: none;
     outline: none;
-    color: var(--secondaryColor);
     visibility: hidden;
     opacity: 0;
     font-size: 1.5rem;
@@ -65,7 +65,6 @@ header .nav_btn {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color: var(--primaryColor);
         transition: 0.5s;
         transform: translateY(-100vh);
     }

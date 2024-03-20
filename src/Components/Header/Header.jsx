@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Offcanvas from "../Offcanvas/Offcanvas";
+import classes from './Header.module.css'
 
 export default function Header({ title = "In Evidenza", subtitle = "" }) {
 
@@ -21,14 +22,14 @@ export default function Header({ title = "In Evidenza", subtitle = "" }) {
 
     return (
         <>
-            {windowWidth < 1200
+            {windowWidth < 1400
                 ?
                 <div className="container-fluid">
-                    <div className="row align-items-center my-3">
-                        <div className="col-1">
+                    <div className="row align-items-center my-3 position-relative">
+                        <div className={classes.open_offcanvas}>
                             <Offcanvas />
                         </div>
-                        <div className="col-10">
+                        <div className="col-12">
                             <h1 className="text-center">{title}</h1>
                             <h3 className="text-center">{subtitle}</h3>
                         </div>
