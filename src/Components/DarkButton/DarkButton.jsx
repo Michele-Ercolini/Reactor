@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import classes from "./DarkButton.module.css"
-import { DarkContext } from "../../Context/Context"
+import { DarkContext } from "../../Contexts/Contexts"
 
 export default function DarkButton() {
 

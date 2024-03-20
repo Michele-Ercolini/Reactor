@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./GenreLink.module.css"
 import { useContext } from "react";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 
 export default function GenreLink({ genre }) {
 

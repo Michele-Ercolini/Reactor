@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 
 export default function Searchbar() {
 

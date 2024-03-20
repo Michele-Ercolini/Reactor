@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import { useContext } from "react";
 import classes from './Layout.module.css'
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 import Footer from "../Footer/Footer";
 
 export default function Layout() {

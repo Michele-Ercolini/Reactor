@@ -4,7 +4,7 @@ import SwiperHome from "../../Components/SwiperHome/SwiperHome";
 import routes from "../../routes";
 import classes from "./Homepage.module.css"
 import { useContext } from "react";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 export default function Homepage() {
 
     const games = useLoaderData();

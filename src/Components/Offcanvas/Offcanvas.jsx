@@ -5,7 +5,7 @@ import ListPlatforms from "../ListPlatforms/ListPlatforms";
 import classes from "./Offcanvas.module.css"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useContext } from "react";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 
 export default function Offcanvas() {
 

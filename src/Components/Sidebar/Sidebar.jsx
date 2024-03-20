@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch.js"
 import ListGenres from "../ListGenres/ListGenres.jsx";
 import ListPlatforms from "../ListPlatforms/ListPlatforms.jsx";
 import { useContext } from "react";
-import { DarkContext } from "../../Context/Context.jsx";
+import { DarkContext } from "../../Contexts/Contexts";
 export default function Sidebar() {
 
     const API_KEY = import.meta.env.VITE_API_KEY;

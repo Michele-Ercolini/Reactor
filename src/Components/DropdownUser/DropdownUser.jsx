@@ -2,10 +2,10 @@ import { useContext, useState } from "react"
 import { FaRegUserCircle } from "react-icons/fa"
 import { Link } from "react-router-dom";
 import routes from "../../routes";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext, UserContext } from "../../Contexts/Contexts";
 import classes from './DropdownUser.module.css'
 
-export default function DropdownUser({removeNavbar}) {
+export default function DropdownUser({ removeNavbar }) {
 
     const { dark } = useContext(DarkContext);
 
@@ -15,10 +15,12 @@ export default function DropdownUser({removeNavbar}) {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-    const handleDropdown = ()=>{
+    const handleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
         removeNavbar();
     }
+
+    const { user, signOut } = useContext(UserContext);
 
     return (
         <div className={classes.dropdown + " mx-xl-3"}>
@@ -27,8 +29,14 @@ export default function DropdownUser({removeNavbar}) {
             </a>
             {isDropdownOpen &&
                 <div className={classes.dropdown_content}>
-                    <Link to={routes.login} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Accedi</Link>
-                    <Link to={routes.signup} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Registrati</Link>
+                    {!user ?
+                        <>
+                            <Link to={routes.login} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Accedi</Link>
+                            <Link to={routes.signup} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Registrati</Link>
+                        </>
+                        :
+                        <Link className={(dark ? " dark" : " light")} onClick={()=>signOut()}>Logout</Link>
+                    }
                 </div>
             }
         </div>

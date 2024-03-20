@@ -7,7 +7,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import Searchbar from "../Searchbar/Searchbar";
 import Logo from './../../../public/media/color_logo_no_background.png';
 import DarkButton from "../DarkButton/DarkButton";
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 import DropdownUser from "../DropdownUser/DropdownUser"
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
                 <nav ref={navRef} className={(dark ? "dark" : "light")}>
                     <Searchbar />
                     <DarkButton />
-                    <DropdownUser removeNavbar={removeNavbar}/>
+                    <DropdownUser removeNavbar={removeNavbar} />
                     <Link>
                         <RiShoppingCartLine size="1.5rem" color="var(--accent2Color)" />
                     </Link>

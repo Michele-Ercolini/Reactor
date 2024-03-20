@@ -2,7 +2,7 @@ import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import classes from "./CardSwiperHome.module.css"
-import { DarkContext } from "../../Context/Context";
+import { DarkContext } from "../../Contexts/Contexts";
 
 export default function CardSwiperHome({ game }) {
 

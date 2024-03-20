@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { DarkContext } from "../../Context/Context"
+import { DarkContext } from "../../Contexts/Contexts"
 
 import SocialLinks from "../SocialLinks/SocialLinks";
 import FooterLinks from "../FooterLinks/FooterLinks";
