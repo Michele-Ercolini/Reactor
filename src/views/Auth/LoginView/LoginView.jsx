@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react'
-import classes from './Login.module.css'
+import classes from './LoginView.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { DarkContext, UserContext } from '../../../Contexts/Contexts'
 import routes from '../../../routes'
 
-export default function Login() {
+export default function LoginView() {
 
     const { dark } = useContext(DarkContext);
 

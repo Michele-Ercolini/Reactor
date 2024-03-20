@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react'
-import classes from './Signup.module.css'
+import classes from './SignupView.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { DarkContext, UserContext } from '../../../Contexts/Contexts'
 import routes from '../../../routes'
 
-export default function Signup() {
+export default function SignupView() {
 
     const { dark } = useContext(DarkContext);
 

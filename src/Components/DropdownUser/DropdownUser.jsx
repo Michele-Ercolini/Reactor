@@ -43,7 +43,7 @@ export default function DropdownUser({ removeNavbar }) {
                         :
                         <>
                         <Link to={routes.profile} className={(dark ? " dark" : " light")}>Profile</Link>
-                        <Link className={(dark ? " dark" : " light")} onClick={handleSignOut}>Logout</Link>
+                        <Link to={routes.home} className={(dark ? " dark" : " light")} onClick={handleSignOut}>Logout</Link>
                         </>
                     }
                 </div>

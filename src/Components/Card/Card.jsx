@@ -14,6 +14,10 @@ export default function Card({ game }) {
 
     const video = useFetch(`https://api.rawg.io/api/games/${game.id}/movies?key=${API_KEY}`);
 
+    const handleVideoLoadedMetadata = (event) => {
+        event.target.currentTime = 3;
+    };
+
     return (
         <Link to={`/game/${game.id}`}>
             <div className={(dark ? classes.card_dark : classes.card_light)}
@@ -25,7 +29,7 @@ export default function Card({ game }) {
                         (
                             hover ?
                                 (
-                                    video.count > 0 ? <video className={classes.card_img} src={video.results[0].data.max} autoPlay muted loop /> : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
+                                    video.count > 0 ? <video className={classes.card_img} src={video.results[0].data.max} autoPlay muted loop onLoadedMetadata={handleVideoLoadedMetadata}/> : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
                                 )
                                 : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
                         )

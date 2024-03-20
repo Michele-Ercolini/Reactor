@@ -6,9 +6,9 @@ import GenreView, { gamesByGenreLoader } from "./views/GenreView/GenreView";
 import GamesView from "./views/GamesView/GamesView";
 import GameView from "./views/GameView/GameView";
 import AuthLayout from "./Components/AuthLayout/AuthLayout";
-import Signup from "./views/Auth/Signup/Signup";
-import Login from "./views/Auth/Login/Login";
-import Profile from "./views/Auth/Profile/Profile";
+import SignupView from "./views/Auth/SignupView/SignupView";
+import LoginView from "./views/Auth/LoginView/LoginView";
+import ProfileView from "./views/Auth/ProfileView/ProfileView";
 
 const router = createBrowserRouter([
     {
@@ -42,15 +42,15 @@ const router = createBrowserRouter([
         children: [
             {
                 path: routes.signup,
-                element: <Signup />
+                element: <SignupView />
             },
             {
                 path: routes.login,
-                element: <Login />
+                element: <LoginView />
             },
             {
                 path: routes.profile,
-                element: <Profile/>
+                element: <ProfileView />
             }
         ]
     }
