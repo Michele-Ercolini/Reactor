@@ -8,7 +8,7 @@ export default function Sidebar() {
 
     const API_KEY = import.meta.env.VITE_API_KEY;
 
-    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}&page_size=18`);
+    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}&page_size=18&ordering=name`);
 
     const platforms = useFetch(`https://api.rawg.io/api/platforms?key=${API_KEY}&page_size=21`);
 

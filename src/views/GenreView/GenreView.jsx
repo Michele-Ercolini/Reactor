@@ -16,7 +16,7 @@ export default function GenreView() {
 
 export async function gamesByGenreLoader({ params }) {
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const promise = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}&genres=${params.slug}&page_size=18`);
+    const promise = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}&genres=${params.slug}&page_size=21`);
     const json = await promise.json();
     return json.results;
 }

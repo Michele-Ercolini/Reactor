@@ -8,6 +8,7 @@ import { DarkContext } from "../../Contexts/Contexts";
 export default function Homepage() {
 
     const games = useLoaderData();
+    console.log(games);
 
     const { dark } = useContext(DarkContext);
     return (
@@ -30,7 +31,7 @@ export default function Homepage() {
 
 export async function gamesLoader() {
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const promise = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}&dates=2023-09-01,2024-03-10`);
+    const promise = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}&dates=2020-01-01,2024-03-20&page_size=21&ordering=-metacritic`);
     const json = await promise.json();
     return json.results;
 }
