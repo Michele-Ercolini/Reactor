@@ -1,7 +1,7 @@
 .wrapper {
     display: inline-flex;
     list-style: none;
-    height: 120px;
+    height: auto;
     width: 100%;
     justify-content: center;
     padding: 0;
@@ -61,7 +61,7 @@
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before {
-    background: linear-gradient(120deg, #3b5998, #FFFFFF);
+    background: linear-gradient(120deg, #3b5998, #f1f1f1);
 }
 
 .wrapper .twitter:hover,
@@ -73,17 +73,23 @@
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: linear-gradient(120deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.wrapper .steam:hover,
-.wrapper .steam:hover .tooltip,
-.wrapper .steam:hover .tooltip::before {
-    background: linear-gradient(120deg, #00adee, #000000);
+.wrapper .twitch:hover,
+.wrapper .twitch:hover .tooltip,
+.wrapper .twitch:hover .tooltip::before {
+    background:linear-gradient(120deg, #6441a5, #b9a3e3, #f1f1f1);
+}
+
+.wrapper .discord:hover,
+.wrapper .discord:hover .tooltip,
+.wrapper .discord:hover .tooltip::before {
+    background:linear-gradient(120deg, #7289da, #99aab5, #2c2f33);
 }
 
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-    background: linear-gradient(45deg, #4078c0, #6e5494, #bd2c00, #c9510c, #6cc644, #fafafa);
+    background: linear-gradient(120deg, #4078c0, #6e5494, #bd2c00, #c9510c, #6cc644, #fafafa);
 }

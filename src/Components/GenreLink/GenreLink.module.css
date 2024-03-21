@@ -1,110 +1,110 @@
 .sidebar_item {
     position: relative;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     z-index: 1;
 }
 
 .sidebar_item:nth-child(1):hover~span {
-    height: 3rem;
+    height: 2.6rem;
     top: 4.8rem;
 }
 
 .sidebar_item:nth-child(2):hover~span {
-    height: 3rem;
-    top: 7.9rem;
+    height: 2.6rem;
+    top: 7.6rem;
 }
 
 .sidebar_item:nth-child(3):hover~span {
-    height: 3rem;
-    top: 10.9rem;
+    height: 2.6rem;
+    top: 10.5rem;
 }
 
 .sidebar_item:nth-child(4):hover~span {
-    height: 3rem;
-    top: 14rem;
+    height: 2.6rem;
+    top: 13.3rem;
 }
 
 .sidebar_item:nth-child(5):hover~span {
-    height: 3rem;
-    top: 17rem;
+    height: 2.6rem;
+    top: 15rem;
 }
 
 .sidebar_item:nth-child(6):hover~span {
-    height: 3rem;
-    top: 20.1rem;
+    height: 2.6rem;
+    top: 19rem;
 }
 
 .sidebar_item:nth-child(7):hover~span {
-    height: 3rem;
-    top: 23.1rem;
+    height: 2.6rem;
+    top: 21.9rem;
 }
 
 .sidebar_item:nth-child(8):hover~span {
-    height: 3rem;
-    top: 26.2rem;
+    height: 2.6rem;
+    top: 24.7rem;
 }
 
 .sidebar_item:nth-child(9):hover~span {
-    height: 3rem;
-    top: 29.2rem;
+    height: 2.6rem;
+    top: 27.6rem;
 }
 
 .sidebar_item:nth-child(10):hover~span {
-    height: 3rem;
-    top: 32.3rem;
+    height: 2.6rem;
+    top: 30.4rem;
 }
 
 .sidebar_item:nth-child(11):hover~span {
-    height: 3rem;
-    top: 35.3rem
+    height: 2.6rem;
+    top: 33.3rem
 }
 
 .sidebar_item:nth-child(12):hover~span {
-    height: 3rem;
-    top: 38.4rem;
+    height: 2.6rem;
+    top: 36.1rem;
 }
 
 .sidebar_item:nth-child(13):hover~span {
-    height: 3rem;
-    top: 41.4rem
+    height: 2.6rem;
+    top: 39rem
 }
 
 .sidebar_item:nth-child(14):hover~span {
-    height: 3rem;
-    top: 44.5rem;
+    height: 2.6rem;
+    top: 41.8rem;
 }
 
 .sidebar_item:nth-child(15):hover~span {
-    height: 3rem;
-    top: 47.5rem;
+    height: 2.6rem;
+    top: 44.7rem;
 }
 
 .sidebar_item:nth-child(16):hover~span {
-    height: 3rem;
-    top: 50.6rem;
+    height: 2.6rem;
+    top: 47.5rem;
 }
 
 .sidebar_item:nth-child(17):hover~span {
-    height: 3rem;
-    top: 53.6rem;
+    height: 2.6rem;
+    top: 50.4rem;
 }
 
 .sidebar_item:nth-child(18):hover~span {
-    height: 3rem;
-    top: 56.7rem;
+    height: 2.6rem;
+    top: 53.2rem;
 }
 
 .sidebar_item:nth-child(19):hover~span {
-    height: 3rem;
-    top: 59.7rem;
+    height: 2.6rem;
+    top: 56.1rem;
 }
 
 .img_custom{
     border: 1px solid var(--accent2Color);
     border-radius: 50%;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.5rem;
+    height: 2.6rem;
     margin-right: 1.5rem;
 }
 

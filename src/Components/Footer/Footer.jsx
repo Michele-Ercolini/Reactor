@@ -11,18 +11,25 @@ export default function Footer() {
     const { dark } = useContext(DarkContext);
 
     return (
-        <footer className="container-fluid my-5 text-center">
-            <div className={`${classes.space} ${classes.border}`}></div>
-            <SocialLinks />
-            {/* Newsletter */}
-            <section>
-                <p className='lead fw-semibold fs-4'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                    repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                    eum harum corrupti dicta, aliquam sequi voluptate quas.
-                </p>
-            </section>
-            <FooterLinks />
-        </footer>
+        <>
+            <div className={classes.space}></div>
+            <footer className={classes.border + " container-fluid"}>
+                <SocialLinks />
+                {/* Newsletter */}
+                <section className={"row " + (dark ? "dark" : "light")}>
+                    <div className="col-12 col-md-6 offset-md-2">
+                        <p className='lead p-3'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                            eum harum corrupti dicta, aliquam sequi voluptate quas.
+                        </p>
+                    </div>
+                    <FooterLinks />
+                    <div className="col-12 col-md-10 offset-md-2 text-center">
+                        <h5>© 2020 Copyright:  <a className={"lead text-decoration-none " + (dark ? "dark" : "light")} href="https://github.com/Michele-Ercolini">Michele Ercolini</a></h5>
+                    </div>
+                </section>
+            </footer>
+        </>
     )
 }

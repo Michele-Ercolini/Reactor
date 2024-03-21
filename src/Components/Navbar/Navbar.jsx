@@ -35,7 +35,7 @@ export default function Navbar() {
                     <Searchbar />
                     <DarkButton />
                     <div className="ms-lg-5">
-                        <RiShoppingCartLine size="1.5rem" color="var(--accent2Color)" />
+                        <RiShoppingCartLine className={classes.cart} size="1.5rem" color="var(--accent2Color)" />
                     </div>
                     <DropdownUser removeNavbar={removeNavbar} />
                     <button className={`${classes.nav_btn} ${classes.nav_close_btn}`} onClick={showNavbar}>

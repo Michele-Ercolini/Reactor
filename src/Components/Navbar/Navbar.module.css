@@ -47,6 +47,10 @@ header .nav_btn {
     display: none;
 }
 
+.cart{
+    cursor: pointer;
+}
+
 .username {
     position: absolute;
     text-align: center;

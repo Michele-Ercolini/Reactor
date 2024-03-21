@@ -29,11 +29,14 @@ h6 {
 .light {
   background-color: var(--secondaryColor);
   color: var(--primaryColor);
+  transition: 0.5s;
+
 }
 
 .dark {
   background-color: var(--primaryColor);
   color: var(--secondaryColor);
+  transition: 0.5s;
 }
 
 .text-primaryColor {

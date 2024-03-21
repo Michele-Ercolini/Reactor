@@ -1,9 +1,9 @@
-.border{
-    border-bottom: 2px solid var(--accent2Color);
-}
-
 .space{
     height: 10vh;
+}
+
+.border{
+    box-shadow: 0px 2px 5px var(--accent2Color);
 }
 
 p{

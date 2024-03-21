@@ -65,7 +65,14 @@ export default function SignupView() {
             <div className={classes.inputBox}>
                 <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="password" required placeholder='Password' name='password' onChange={handleChange} />
             </div>
-            <button className={classes.btn_custom + (dark ? ' text-secondaryColor' : ' text-primaryColor')}>Registrati</button>
+            <div className="d-flex justify-content-center justify-content-md-end my-5">
+                <button className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
+                    <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                    <span className={classes.text}>Registrati!</span>
+                    <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                    <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                </button>
+            </div>
             <div className={classes.auth}>
                 <p className='text-center'>Sei già registrato?<Link className={classes.link} to={routes.login}>Login</Link></p>
             </div>

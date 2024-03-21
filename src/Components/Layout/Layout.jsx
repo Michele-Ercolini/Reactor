@@ -19,12 +19,12 @@ export default function Layout() {
                         <div className="d-none d-xxl-block col-xxl-2 p-0">
                             <Sidebar />
                         </div>
-                        <div className="col-12 col-xxl-10 px-xxl-5 pt-xxl-5">
+                        <div className="col-12 col-xxl-10 px-xxl-5 pt-xxl-3">
                             <Outlet />
-                            <Footer />
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         </>
     )

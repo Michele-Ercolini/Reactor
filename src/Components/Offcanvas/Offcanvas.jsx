@@ -11,7 +11,7 @@ export default function Offcanvas() {
 
     const API_KEY = import.meta.env.VITE_API_KEY;
 
-    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}`);
+    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}&page_size=18`);
 
     const platforms = useFetch(`https://api.rawg.io/api/platforms?key=${API_KEY}&page_size=21`);
 
