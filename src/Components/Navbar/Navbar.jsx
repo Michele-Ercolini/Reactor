@@ -34,9 +34,9 @@ export default function Navbar() {
                     {profile && <h6 className={classes.username}>{profile.username}</h6>}
                     <Searchbar />
                     <DarkButton />
-                    <div className="ms-lg-5">
+                    {/* <div className="ms-lg-5">
                         <RiShoppingCartLine className={classes.cart} size="1.5rem" color="var(--accent2Color)" />
-                    </div>
+                    </div> */}
                     <DropdownUser removeNavbar={removeNavbar} />
                     <button className={`${classes.nav_btn} ${classes.nav_close_btn}`} onClick={showNavbar}>
                         <FaTimes color={"var(--accent2Color)"} />

@@ -1,5 +1,5 @@
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
-
+import classes from './SwiperHome.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -10,7 +10,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
 
 import { useRef } from 'react';
-import CardSwiperHome from '../CardSwiperHome/CardSwiperHome';
+import Card from '../Card/Card';
 
 export default function SwiperHome({ games }) {
 
@@ -47,12 +47,12 @@ export default function SwiperHome({ games }) {
                     slideShadows: true,
                 }}
                 modules={[Autoplay, EffectCoverflow]}
-                className="mySwiper"
+                className={classes.card + " mySwiper"}
             >
                 {games.map(game => {
                     return (
-                        <SwiperSlide key={game.id}>
-                            <CardSwiperHome game={game} />
+                        <SwiperSlide className={classes.card} key={game.id}>
+                            <Card game={game} />
                         </SwiperSlide>
                     )
                 })}

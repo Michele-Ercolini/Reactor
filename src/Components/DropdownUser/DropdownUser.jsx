@@ -29,7 +29,7 @@ export default function DropdownUser({ removeNavbar }) {
 
 
     return (
-        <div className={classes.dropdown + " ms-lg-5"}>
+        <div className={classes.dropdown}>
             <a className={classes.dropbtn} onClick={toggleDropdown}>
                 <FaRegUserCircle size="2rem" color="var(--accent2Color)" />
             </a>
