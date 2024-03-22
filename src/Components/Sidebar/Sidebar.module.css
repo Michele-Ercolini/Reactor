@@ -13,6 +13,20 @@
     display: none; /* Nascondi la scrollbar */
 }
 
+.titleHeight{
+    height: 4.8rem;
+}
+
+.title{
+    font-size: 2rem;
+    transition: .5s;
+}
+
+.subtitle{
+    font-size: 1rem;
+    transition: .5s;
+}
+
 
 /* .sidebar_item::after{
     content: "";

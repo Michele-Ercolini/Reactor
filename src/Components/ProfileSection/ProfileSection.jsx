@@ -3,6 +3,7 @@ import classes from './ProfileSection.module.css'
 import { DarkContext, UserContext } from '../../Contexts/Contexts'
 import { Link } from 'react-router-dom';
 import routes from '../../routes';
+import Sora from '../../../public/media/Sora.jpg'
 export default function ProfileSection() {
 
     const { dark } = useContext(DarkContext);
@@ -11,7 +12,7 @@ export default function ProfileSection() {
     return (
         <div className={classes.card + " container-fluid p-0"}>
             <div className={classes.sfondo}></div>
-            <img src="https://picsum.photos/500" className={classes.profilo} alt="Foto del profilo" />
+            <img src={Sora} className={classes.profilo} alt="Foto del profilo" />
             <div className={classes.info + ' row px-3 py-5 p-sm-5'}>
                 <div className="col-5">
                     {profile &&

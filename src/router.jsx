@@ -10,6 +10,7 @@ import SignupView from "./views/Auth/SignupView/SignupView";
 import LoginView from "./views/Auth/LoginView/LoginView";
 import ProfileView from "./views/Auth/ProfileView/ProfileView";
 import SettingsView from "./views/Auth/SettingsView/SettingsView";
+import PlatformView, { gamesByPlatformLoader } from "./views/PlatformView/PlatformView";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
                 path: routes.genre,
                 element: <GenreView />,
                 loader: gamesByGenreLoader
+            },
+            {
+                path: routes.platform,
+                element: <PlatformView />,
+                loader: gamesByPlatformLoader
             }
         ]
     },
