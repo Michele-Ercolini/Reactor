@@ -9,7 +9,7 @@ export default function SocialLinks() {
 
     return (
         <section className={classes.border + " row " + (dark ? "dark" : "light")}>
-            <div className="col-12 col-md-10 offset-md-2">
+            <div className="col-12 col-xxl-10 offset-xxl-2">
                 <ul className={classes.wrapper + ' my-3'}>
                     <li className={`${classes.icon} ${classes.facebook}`}>
                         <span className={classes.tooltip}>Facebook</span>

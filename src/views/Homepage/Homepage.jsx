@@ -8,9 +8,9 @@ import { DarkContext } from "../../Contexts/Contexts";
 export default function Homepage() {
 
     const games = useLoaderData();
-    console.log(games);
 
     const { dark } = useContext(DarkContext);
+    
     return (
         <>
             <div className={classes.body}>

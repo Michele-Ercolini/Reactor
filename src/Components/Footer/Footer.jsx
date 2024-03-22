@@ -17,7 +17,7 @@ export default function Footer() {
                 <SocialLinks />
                 {/* Newsletter */}
                 <section className={"row pt-3 " + (dark ? "dark" : "light")}>
-                    <div className="col-12 col-md-6 offset-md-2">
+                    <div className="col-12 col-md-8 col-xxl-6 offset-xxl-2">
                         <p className='lead ps-5'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
                             repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
@@ -25,7 +25,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <FooterLinks />
-                    <div className="col-12 col-md-10 offset-md-2 text-center">
+                    <div className="col-12 col-xxl-10 offset-xxl-2 text-center">
                         <h5>© 2024 Copyright:  <a className={"lead text-decoration-none fst-italic fw-semibold " + (dark ? "dark" : "light")} href="https://github.com/Michele-Ercolini">Michele Ercolini</a></h5>
                     </div>
                 </section>
