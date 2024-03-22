@@ -1,0 +1,40 @@
+.card {
+    position: relative;
+    height: 60vh;
+    border: 1px solid var(--accent2Color);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--accentColor);
+    /* Assicura che l'overflow venga nascosto */
+}
+
+.sfondo {
+    width: 100%;
+    height: 50%;
+    background-image: url('https://picsum.photos/600');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.profilo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    border-radius: 50%;
+    border: 10px solid var(--accentColor);
+    z-index: 1;
+    /* Assicura che l'immagine del profilo sia davanti allo sfondo */
+}
+
+.info {
+    padding: 3rem;
+
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 20px;
+}

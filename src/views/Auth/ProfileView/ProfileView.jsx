@@ -1,5 +1,13 @@
+import ProfileSection from "../../../Components/ProfileSection/ProfileSection";
+
 export default function ProfileView(){
     return (
-        <h1>Il mio profilo</h1>
+        <div className="container">
+            <div className="row justify-content-center align-items-center">
+                <div className="col-12 col-md-9">
+                    <ProfileSection/>
+                </div>
+            </div>
+        </div>
     )
 }

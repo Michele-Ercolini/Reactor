@@ -15,9 +15,7 @@ export default function AuthLayout() {
                 <Navbar />
                 <div className={"container-fluid " + (dark ? "text-secondaryColor" : "text-primaryColor")}>
                     <div className={`row justify-content-center align-items-center ${classes.height100}`}>
-                        <div className="col-12 col-sm-10 col-lg-6 ">
-                            <Outlet />
-                        </div>
+                        <Outlet />
                     </div>
                 </div>
             </div>
