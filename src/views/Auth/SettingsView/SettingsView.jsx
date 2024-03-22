@@ -8,15 +8,15 @@ export default function SettingsView() {
 
     const { dark } = useContext(DarkContext);
 
-    const { updateProfile } = useContext(UserContext);
+    const { profile, updateProfile } = useContext(UserContext);
 
     const navigate = useNavigate();
 
     const [form, setForm] = useState(
         {
-            first_name: '',
-            last_name: '',
-            username: ''
+            first_name: profile && profile.first_name,
+            last_name: profile && profile.last_name,
+            username: profile && profile.username
         }
     )
 
