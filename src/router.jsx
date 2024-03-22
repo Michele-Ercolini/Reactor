@@ -9,6 +9,7 @@ import AuthLayout from "./Components/AuthLayout/AuthLayout";
 import SignupView from "./views/Auth/SignupView/SignupView";
 import LoginView from "./views/Auth/LoginView/LoginView";
 import ProfileView from "./views/Auth/ProfileView/ProfileView";
+import SettingsView from "./views/Auth/SettingsView/SettingsView";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: routes.profile,
                 element: <ProfileView />
+            },
+            {
+                path: routes.settings,
+                element: <SettingsView />
             }
         ]
     }
