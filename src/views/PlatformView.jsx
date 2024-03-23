@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import Header from "../../Components/Header/Header";
-import ListGames from "../../Components/ListGames/ListGames";
-import useFetch from "../../hooks/useFetch";
+import Header from "../Components/Header/Header";
+import ListGames from "../Components/ListGames/ListGames";
+import useFetch from "../hooks/useFetch";
 
 export default function PlatformView() {
 

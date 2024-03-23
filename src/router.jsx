@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import routes from "./routes";
 import Layout from "./Components/Layout/Layout";
-import Homepage, { gamesLoader } from "./views/Homepage/Homepage";
-import GenreView, { gamesByGenreLoader } from "./views/GenreView/GenreView";
-import GamesView from "./views/GamesView/GamesView";
-import GameView, { GameLoader } from "./views/GameView/GameView";
+import Homepage, { gamesLoader } from "./views/Homepage";
+import GenreView, { gamesByGenreLoader } from "./views/GenreView";
+import GamesView from "./views/GamesView";
+import GameView, { GameLoader } from "./views/GameView";
 import AuthLayout from "./Components/AuthLayout/AuthLayout";
-import SignupView from "./views/Auth/SignupView/SignupView";
-import LoginView from "./views/Auth/LoginView/LoginView";
-import ProfileView from "./views/Auth/ProfileView/ProfileView";
-import SettingsView from "./views/Auth/SettingsView/SettingsView";
-import PlatformView, { gamesByPlatformLoader } from "./views/PlatformView/PlatformView";
+import SignupView from "./views/Auth/SignupView";
+import LoginView from "./views/Auth/LoginView";
+import ProfileView from "./views/Auth/ProfileView";
+import SettingsView from "./views/Auth/SettingsView";
+import PlatformView, { gamesByPlatformLoader } from "./views/PlatformView";
 
 const router = createBrowserRouter([
     {
