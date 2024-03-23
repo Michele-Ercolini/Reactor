@@ -4,7 +4,7 @@ import Layout from "./Components/Layout/Layout";
 import Homepage, { gamesLoader } from "./views/Homepage/Homepage";
 import GenreView, { gamesByGenreLoader } from "./views/GenreView/GenreView";
 import GamesView from "./views/GamesView/GamesView";
-import GameView from "./views/GameView/GameView";
+import GameView, { GameLoader } from "./views/GameView/GameView";
 import AuthLayout from "./Components/AuthLayout/AuthLayout";
 import SignupView from "./views/Auth/SignupView/SignupView";
 import LoginView from "./views/Auth/LoginView/LoginView";
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
             },
             {
                 path: routes.game,
-                element: <GameView />
+                element: <GameView />,
+                loader: GameLoader
             },
             {
                 path: routes.genre,
