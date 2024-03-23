@@ -12,7 +12,7 @@ export default function ProfileSection() {
     return (
         <div className={classes.card + " container-fluid p-0"}>
             <div className={classes.sfondo}></div>
-            <img src={Sora} className={classes.profilo} alt="Foto del profilo" />
+            <img src={profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_url}` : Sora} className={classes.profilo} alt="Foto del profilo" />
             <div className={classes.info + ' row px-3 py-5 p-sm-5'}>
                 <div className="col-5">
                     {profile &&

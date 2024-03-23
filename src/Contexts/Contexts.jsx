@@ -64,7 +64,7 @@ export function UserContextProvider({ children }) {
     }
 
     return (
-        <UserContext.Provider value={{ user, signOut, signUp, login, profile, updateProfile }}>
+        <UserContext.Provider value={{ user, signOut, signUp, login, profile, updateProfile, getUser }}>
             {children}
         </UserContext.Provider>
     )
