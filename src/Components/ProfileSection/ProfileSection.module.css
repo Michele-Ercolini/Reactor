@@ -46,14 +46,52 @@
 }
 
 
-.sfondo {
-    width: 100%;
-    height: 50%;
-    background-image: url('../../../public/media/Kingdom_Hearts.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.optionIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
 }
+
+/* Backgorund profile image */
+
+.wrapper {
+    padding: 1rem 2rem;
+    border: 2px solid var(--accent2Color);
+    background: transparent;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px var(--accentColor);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.fileBox {}
+
+.fileBox input {
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid var(--accent2Color);
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+.fileBox input:focus {
+    border: 3px solid var(--accentColor);
+}
+
+.img_custom{
+    position: absolute;
+    top: 0;
+    height: 30vh;
+    width: 100%;
+    z-index: 0;
+    transition: .5s;
+}
+
+/* card profilo */
 
 .profilo {
     position: absolute;
