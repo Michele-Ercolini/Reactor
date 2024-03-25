@@ -18,7 +18,7 @@ export default function Footer() {
                 {/* Newsletter */}
                 <section className={"row pt-3 " + (dark ? "dark" : "light")}>
                     <div className="col-12 col-md-8 col-xxl-6 offset-xxl-2">
-                        <p className='lead ps-5'>
+                        <p className='lead ps-5 text-accent2Color'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
                             repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
                             eum harum corrupti dicta, aliquam sequi voluptate quas.

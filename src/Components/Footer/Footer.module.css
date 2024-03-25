@@ -5,8 +5,3 @@
 .border{
     box-shadow: 0px 2px 5px var(--accent2Color);
 }
-
-p{
-    color: var(--accent2Color)!important;
-    padding: 0 5rem;
-}

@@ -6,7 +6,6 @@ import Detail from "../Components/Detail/Detail";
 export default function GameView() {
 
     const game = useLoaderData();
-    console.log(game);
     const { id } = useParams();
 
     const API_KEY = import.meta.env.VITE_API_KEY;

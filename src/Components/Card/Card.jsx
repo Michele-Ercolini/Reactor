@@ -1,12 +1,14 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import classes from "./Card.module.css"
-import { DarkContext } from "../../Contexts/Contexts";
+import { DarkContext, UserContext } from "../../Contexts/Contexts";
 import { GoHeart, GoHeartFill } from "react-icons/go";
+import supabase from "../../database/supabase";
 
 export default function Card({ game }) {
     const { dark } = useContext(DarkContext);
+    const { profile } = useContext(UserContext);
 
     const [hover, setHover] = useState(false);
     const videoRef = useRef(null);
@@ -40,12 +42,46 @@ export default function Card({ game }) {
         setIsHoveringButton(false);
     };
 
-    const [isChecked, setIsChecked] = useState(false);
+    const [isFavourite, setIsFavourite] = useState(false);
 
-    const handleChecked = () => {
-        setIsChecked(!isChecked);
-        if (isChecked) {
-            //add to preferiti
+    const getFavourite = async () => {
+
+        let { data: favourites, error } = await supabase
+            .from('favourites')
+            .select()
+            .eq('profile_id', profile && profile.id)
+            .eq('game_id', game.id)
+
+        if(favourites.length > 0){
+            setIsFavourite(true);
+        }else{
+            setIsFavourite(false);
+        }
+
+    }
+
+    useEffect(
+        () => {
+            getFavourite();
+        }, []
+    )
+
+    const handleFavourite = async () => {
+        setIsFavourite((prev) => !prev);
+
+        if (!isFavourite) {
+            const { data, error } = await supabase
+                .from('favourites')
+                .insert([
+                    { profile_id: profile.id, game_id: game.id, game_name: game.name },
+                ])
+                .select()
+        } else {
+            const { error } = await supabase
+                .from('favourites')
+                .delete()
+                .eq('profile_id', profile && profile.id)
+                .eq('game_id', game.id)
         }
     }
 
@@ -67,23 +103,25 @@ export default function Card({ game }) {
                     }
                     <div className={classes.card_section}>
                         <h5 className={classes.card_title}>{game.name}</h5>
-                        {game.genres.slice(0,4).map(genre => {
+                        {game.genres.slice(0, 4).map(genre => {
                             return (
-                                <Link className={"btn mx-1 " + (classes.btn_outline)} to={`/genre/${genre.slug}`}>{genre.name}</Link>
+                                <Link key={genre.id} className={"btn mx-1 " + (classes.btn_outline)} to={`/genre/${genre.slug}`}>{genre.name}</Link>
                             )
                         })}
                     </div>
-                    <button className={classes.btn}
-                        onMouseEnter={handleButtonHover}
-                        onMouseLeave={handleButtonLeave}
-                        onClick={handleChecked}
-                    >
-                        {isChecked &&
-                            <GoHeartFill color="red" size="3rem" />
-                            ||
-                            <GoHeart color="var(--secondaryColor)" size="2rem" />
-                        }
-                    </button>
+                    {profile &&
+                        <button className={classes.btn}
+                            onMouseEnter={handleButtonHover}
+                            onMouseLeave={handleButtonLeave}
+                            onClick={handleFavourite}
+                        >
+                            {isFavourite &&
+                                <GoHeartFill color="red" size="3rem" />
+                                ||
+                                <GoHeart color="var(--secondaryColor)" size="2rem" />
+                            }
+                        </button>
+                    }
                 </div>
             </div>
         </Link>

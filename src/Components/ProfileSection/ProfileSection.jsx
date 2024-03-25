@@ -14,15 +14,19 @@ export default function ProfileSection() {
     const [isOpen, setIsOpen] = useState(false);
     const [file, setFile] = useState();
     const [preview, setPreview] = useState();
+    const [userFavourites, setUserFavourites] = useState();
+    const [userReviews, setUserReviews] = useState();
 
+    /* apre e chiude carica immagine di background */
     const toggleChange = () => {
         setIsOpen(() => !isOpen);
     }
-
+    /* chiude carica immagine di background */
     const closeChange = () => {
         setIsOpen(() => false);
     }
 
+    /* immagine profilo */
     const fileChange = (e) => {
         setFile(() => e.target.files[0]);
     }
@@ -35,6 +39,7 @@ export default function ProfileSection() {
         }, [file]
     )
 
+    /* onSubmit */
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (preview) {
@@ -51,6 +56,33 @@ export default function ProfileSection() {
         }
     }
 
+    /* Lista preferiti dell'utente */
+    const getFavourites = async () => {
+        let { data: favourites, error } = await supabase
+            .from('favourites')
+            .select()
+            .eq('profile_id', profile && profile.id)
+
+        setUserFavourites(favourites);
+    }
+
+    useEffect(
+        () => {
+            getFavourites();
+            getReviews();
+        }, []
+    )
+
+    /* Lista recensioni utente */
+    const getReviews = async () => {
+        let { data: reviews, error } = await supabase
+            .from('reviews')
+            .select()
+            .eq('profile_id', profile && profile.id)
+
+        setUserReviews(reviews);
+    }
+    /* Oggetto di stile */
     const containerStyle = {
         position: 'relative',
         height: '30vh',
@@ -96,7 +128,20 @@ export default function ProfileSection() {
                 </div>
                 <div className="col-5 offset-2 text-end">
                     <h2>I tuoi preferiti</h2>
+                    <ul>
+                        {userFavourites && userFavourites.map(favourite => {
+                            return <li key={favourite.id}>{favourite.game_name}</li>
+                        })}
+                    </ul>
                     <h2>Le tue recensioni</h2>
+                    <ul>
+                        {userReviews && userReviews.map(review=>{
+                            return <li className='d-flex justify-content-between' key={review.id}>
+                                <p>{review.game_name}</p>
+                                <p>{review.review}</p>
+                            </li>
+                        })}
+                    </ul>
                 </div>
                 <div className="col-12 d-flex justify-content-center mt-4">
                     <Link to={routes.settings} className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>

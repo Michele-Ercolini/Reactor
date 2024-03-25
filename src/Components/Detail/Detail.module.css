@@ -7,3 +7,47 @@
 .height56{
     height: 56vh;
 }
+
+.description{
+    
+}
+
+.description p{
+    margin: 2rem 1rem;
+    transition: 0.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 15; /* Numero di righe da mostrare */
+}
+
+@media screen and (max-width: 768px) {
+    .description p{
+        -webkit-line-clamp: 6;
+    }
+}
+
+/*  Reviews */
+
+.reviews_section{
+    height: 20vh;
+    border: 2px solid var(--accent2Color);
+    margin: 1rem;
+    overflow-y: scroll;
+    padding: 0.3rem 1rem 1rem;
+}
+
+.reviews_input{
+    height: 2rem;
+    border: 1px solid var(--accent2Color);
+    width: 85%;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.reviews_btn{
+    background-color: var(--accent2Color);
+    color: var(--secondaryColor);
+    height: 2rem;
+    width: 10%;
+}
