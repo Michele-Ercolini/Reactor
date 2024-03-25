@@ -38,16 +38,42 @@
     border-radius: 20px;
 }
 
+/* description */
+
+.card_section{
+    position: absolute;
+    width: 100%;
+    bottom: 0rem;
+    left: 0rem;
+    padding-bottom: 0.3rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+}
+
 .card_title {
     color: var(--secondaryColor);
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
     font: 1.3rem monospace;
+    margin-left: 1rem;
     text-shadow: -2px -2px 0 var(--primaryColor),
         2px -2px 0 var(--primaryColor),
         -2px 2px 0 var(--primaryColor),
         2px 2px 0 var(--primaryColor);
+}
+
+.btn_outline {
+    --bs-btn-color: var(--secondaryColor)!important;
+    --bs-btn-border-color: var(--accent2Color)!important;
+    --bs-btn-hover-color: var(--secondaryColor)!important;
+    --bs-btn-hover-bg: var(--accent2Color)!important;
+    --bs-btn-hover-border-color: var(--accent2Color)!important;
+    --bs-btn-focus-shadow-rgb: 248, 249, 250;
+    --bs-btn-active-color: var(--secondaryColor)!important;
+    --bs-btn-active-bg: var(--accent2Color)!important;
+    --bs-btn-active-border-color: var(--accent2Color)!important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--accent2Color)!important;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--accent2Color)!important;
+    --bs-gradient: none;
 }
 
 /* Button Heart */

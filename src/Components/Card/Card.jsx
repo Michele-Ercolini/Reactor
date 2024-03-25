@@ -6,7 +6,6 @@ import { DarkContext } from "../../Contexts/Contexts";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 
 export default function Card({ game }) {
-
     const { dark } = useContext(DarkContext);
 
     const [hover, setHover] = useState(false);
@@ -60,13 +59,20 @@ export default function Card({ game }) {
                         video &&
                         (
                             hover ?
-                            (
-                                video.count > 0 ? <video ref={videoRef} className={classes.card_img} src={video.results[0].data.max} autoPlay muted loop /> : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
-                            )
+                                (
+                                    video.count > 0 ? <video ref={videoRef} className={classes.card_img} src={video.results[0].data.max} autoPlay muted loop /> : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
+                                )
                                 : <img src={game.background_image} className={classes.card_img} alt="Game's image" />
                         )
                     }
-                    <h5 className={classes.card_title}>{game.name}</h5>
+                    <div className={classes.card_section}>
+                        <h5 className={classes.card_title}>{game.name}</h5>
+                        {game.genres.slice(0,4).map(genre => {
+                            return (
+                                <Link className={"btn mx-1 " + (classes.btn_outline)} to={`/genre/${genre.slug}`}>{genre.name}</Link>
+                            )
+                        })}
+                    </div>
                     <button className={classes.btn}
                         onMouseEnter={handleButtonHover}
                         onMouseLeave={handleButtonLeave}

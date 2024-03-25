@@ -6,7 +6,7 @@ export default function GamesView(){
     const games = useLoaderData();
     return(
         <>
-            <Header title='Tutti i nostri giochi' subtitle="Lorem"/>
+            <Header title='Tutti i nostri giochi'/>
             <ListGames games={games}/>
         </>
     )

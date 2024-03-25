@@ -1,0 +1,9 @@
+/* navbar height 12vh -> 88vh disponibili -> 3 row da 28,3vh ~ 3 row da 28vh + margin*/
+
+.height28{
+    height: 28vh;
+}
+
+.height56{
+    height: 56vh;
+}

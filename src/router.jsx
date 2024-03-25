@@ -28,11 +28,6 @@ const router = createBrowserRouter([
                 loader: gamesLoader
             },
             {
-                path: routes.game,
-                element: <GameView />,
-                loader: GameLoader
-            },
-            {
                 path: routes.genre,
                 element: <GenreView />,
                 loader: gamesByGenreLoader
@@ -65,7 +60,12 @@ const router = createBrowserRouter([
                 element: <SettingsView />
             }
         ]
-    }
+    },
+    {
+        path: routes.game,
+        element: <GameView />,
+        loader: GameLoader
+    },
 ])
 
 export default router;
