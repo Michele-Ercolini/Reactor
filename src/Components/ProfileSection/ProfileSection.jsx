@@ -61,7 +61,7 @@ export default function ProfileSection() {
         let { data: favourites, error } = await supabase
             .from('favourites')
             .select()
-            .eq('profile_id', profile && profile.id)
+            .eq('profile_id',  profile.id)
 
         setUserFavourites(favourites);
     }
@@ -78,18 +78,18 @@ export default function ProfileSection() {
         let { data: reviews, error } = await supabase
             .from('reviews')
             .select()
-            .eq('profile_id', profile && profile.id)
+            .eq('profile_id',  profile.id)
 
         setUserReviews(reviews);
     }
     /* Oggetto di stile */
     const containerStyle = {
         position: 'relative',
-        height: '30vh',
+        height: '35vh',
         backgroundPosition: profile ? 'center' : 'initial',
         backgroundSize: profile ? 'cover' : 'initial',
         backgroundRepeat: profile ? 'no-repeat' : 'initial',
-        backgroundImage: profile && profile.avatar_background_url ? `url(${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_background_url})` : `url(${Sora})`,
+        backgroundImage:  profile.avatar_background_url ? `url(${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_background_url})` : `url(${Sora})`,
     };
 
     return (
@@ -115,41 +115,54 @@ export default function ProfileSection() {
                 </form>
                 {/* !AvatarForm */}
             </div>
-            <img src={profile && profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_url}` : Sora} className={classes.profilo} alt="Foto del profilo" />
-            <div className={classes.info + ' row px-3 py-5 p-sm-5'}>
-                <div className="col-5">
-                    {profile &&
-                        <>
-                            <h3>{`${profile.first_name} ${profile.last_name}`}</h3>
-                            <h2>{profile.username}</h2>
-                            <h5>{user.email}</h5>
-                        </>
-                    }
+            <img src={profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_url}` : Sora} className={classes.profilo} alt="Foto del profilo" />
+            <div className={classes.info + ' row px-3 px-sm-5 pt-3'}>
+                <div className="col-5 d-flex flex-column justify-content-between">
+
+                    <h2>{`${profile.first_name} ${profile.last_name}`}</h2>
+                    <h6 className='display-3'>{profile.username}</h6>
+                    <h5>{user.email}</h5>
+
                 </div>
-                <div className="col-5 offset-2 text-end">
-                    <h2>I tuoi preferiti</h2>
-                    <ul>
+                <div className="col-5 offset-2 col-sm-6 offset-sm-1 text-end">
+                    <h2 className='mb-3'>I TUOI PREFERITI</h2>
+                    <ul className={'list-unstyled ' + classes.favourites}>
                         {userFavourites && userFavourites.map(favourite => {
-                            return <li key={favourite.id}>{favourite.game_name}</li>
-                        })}
-                    </ul>
-                    <h2>Le tue recensioni</h2>
-                    <ul>
-                        {userReviews && userReviews.map(review=>{
-                            return <li className='d-flex justify-content-between' key={review.id}>
-                                <p>{review.game_name}</p>
-                                <p>{review.review}</p>
-                            </li>
+                            return (
+                                <div key={favourite.id}>
+                                    <li className='fs-5 me-3 mb-2'>{favourite.game_name}</li>
+                                </div>
+                            )
                         })}
                     </ul>
                 </div>
-                <div className="col-12 d-flex justify-content-center mt-4">
-                    <Link to={routes.settings} className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
-                        <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                        <span className={classes.text}>Modifica Profilo</span>
-                        <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                        <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                    </Link>
+            </div>
+            <div className={classes.info2 + " row px-3 px-sm-5"}>
+                <div className="col-5 d-flex justify-content-center align-items-center">
+                    <div>
+                        <Link to={routes.settings} className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
+                            <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                            <span className={classes.text}>Modifica Profilo</span>
+                            <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                            <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                        </Link>
+                    </div>
+                </div>
+                <div className="col-7 col-sm-6 offset-sm-1 text-end">
+                    <h2 className='mb-3'>LE TUE RECENSIONI</h2>
+                    <ul className={'list-unstyled ' + classes.reviews}>
+                        {userReviews && userReviews.map(review => {
+                            return (
+                                <div key={review.id}>
+                                    <li className='fs-5 me-3 d-sm-flex justify-content-sm-between'>
+                                        <p className='mx-xl-3 text-start'>{review.game_name}:</p>
+                                        <p>{review.review}</p>
+                                    </li>
+                                    <hr />
+                                </div>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         </div>

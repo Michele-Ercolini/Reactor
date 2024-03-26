@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    height: 60vh;
+    height: 70vh;
     border: 2px solid var(--accent2Color);
     background: transparent;
     backdrop-filter: blur(3px);
@@ -112,6 +112,25 @@
 .info h2 {
     margin: 0;
     font-size: 20px;
+}
+
+.info2{
+
+}
+
+.info2 h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.favourites{
+    height: 8vh;
+    overflow-y: scroll;
+}
+
+.reviews{
+    height: 8vh;
+    overflow-y: scroll;
 }
 
 /* Button */

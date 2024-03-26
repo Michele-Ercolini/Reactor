@@ -1,0 +1,26 @@
+.card_custom{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border-radius: 50px 0;
+    box-shadow: inset -20px -20px 60px var(--accentColor),
+        inset 20px 20px 60px var(--accent2Color);
+    transition: 0.5s;
+    border: 2px solid var(--accent2Color);
+}
+
+
+.card_body{
+    height: 15vh;
+    padding: 1rem;
+}
+
+.card_img{
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 50px 0;
+    transition: 0.5s;
+}

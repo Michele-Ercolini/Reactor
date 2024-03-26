@@ -9,13 +9,13 @@ export default function GameView() {
     const { id } = useParams();
 
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const achievement = useFetch(`https://api.rawg.io/api/games/${id}/achievements?key=${API_KEY}`);
+    const achievements = useFetch(`https://api.rawg.io/api/games/${id}/achievements?key=${API_KEY}`);
 
-    console.log(achievement);
+    console.log(achievements);
     return (
         <>
             <Navbar />
-            <Detail game={game}/>
+            <Detail game={game} achievements={achievements && achievements.results}/>
         </>
     )
 }

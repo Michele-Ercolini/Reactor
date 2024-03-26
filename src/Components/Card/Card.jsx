@@ -105,7 +105,7 @@ export default function Card({ game }) {
                         <h5 className={classes.card_title}>{game.name}</h5>
                         {game.genres.slice(0, 4).map(genre => {
                             return (
-                                <Link key={genre.id} className={"btn mx-1 " + (classes.btn_outline)} to={`/genre/${genre.slug}`}>{genre.name}</Link>
+                                <p key={genre.id} className={"btn mx-1 " + (classes.btn_outline)} >{genre.name}</p>
                             )
                         })}
                     </div>
