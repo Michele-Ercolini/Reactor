@@ -107,7 +107,7 @@ export default function ProfileSection() {
                     <div className="my-2">
                         <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                             <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                            <span className="text">Carica!</span>
+                            <span className="text">Upload!</span>
                             <span className={"bottom_key_1" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                             <span className={"bottom_key_2" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                         </button>
@@ -125,7 +125,7 @@ export default function ProfileSection() {
 
                 </div>
                 <div className="col-5 offset-2 col-sm-6 offset-sm-1 text-end">
-                    <h2 className='mb-3'>I TUOI PREFERITI</h2>
+                    <h2 className='mb-3'>Your Favourites</h2>
                     <ul className={'list-unstyled ' + classes.favourites}>
                         {userFavourites && userFavourites.map(favourite => {
                             return (
@@ -142,14 +142,14 @@ export default function ProfileSection() {
                     <div>
                         <Link to={routes.settings} className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                             <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                            <span className={classes.text}>Modifica Profilo</span>
+                            <span className={classes.text}>Edit Profile</span>
                             <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                             <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                         </Link>
                     </div>
                 </div>
                 <div className="col-7 col-sm-6 offset-sm-1 text-end">
-                    <h2 className='my-3'>LE TUE RECENSIONI</h2>
+                    <h2 className='my-3'>Your Reviews</h2>
                     <ul className={'list-unstyled ' + classes.reviews}>
                         {userReviews && userReviews.map(review => {
                             return (

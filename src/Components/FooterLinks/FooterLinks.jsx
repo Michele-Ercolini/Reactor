@@ -3,7 +3,7 @@ import classes from './FooterLinks.module.css'
 import { DarkContext } from '../../Contexts/Contexts'
 export default function FooterLinks() {
 
-    const {dark} = useContext(DarkContext);
+    const { dark } = useContext(DarkContext);
 
     return (
         <>

@@ -25,7 +25,7 @@ export default function Searchbar() {
 
     const handleClick = async () => {
 
-        const promise = await fetch(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}&search=${search}`);
+        const promise = await fetch(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}&search=${search}&page_size=21`);
         const json = await promise.json();
         console.log(json);
         navigate('/search', { state: { games: json } });

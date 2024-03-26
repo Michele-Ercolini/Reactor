@@ -52,9 +52,9 @@ export default function Card({ game }) {
             .eq('profile_id', profile && profile.id)
             .eq('game_id', game.id)
 
-        if(favourites.length > 0){
+        if (favourites.length > 0) {
             setIsFavourite(true);
-        }else{
+        } else {
             setIsFavourite(false);
         }
 

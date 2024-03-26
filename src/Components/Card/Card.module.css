@@ -26,10 +26,12 @@
 
 .card_dark:hover {
     box-shadow: 0px 0px 30px 1px var(--accent2Color);
+    border-radius: 20px;
 }
 
 .card_light:hover {
     box-shadow: 0px 0px 30px 1px var(--accent2Color);
+    border-radius: 20px;
 }
 
 .card_img {
@@ -45,7 +47,8 @@
     width: 100%;
     bottom: 0rem;
     left: 0rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0rem;
+    border-radius: 20px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 1));
 }
 
@@ -60,6 +63,7 @@
 }
 
 .btn_outline {
+    margin-bottom: 0.3rem;
     --bs-btn-color: var(--secondaryColor)!important;
     --bs-btn-border-color: var(--accent2Color)!important;
     --bs-btn-hover-color: var(--secondaryColor)!important;

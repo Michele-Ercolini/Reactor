@@ -8,14 +8,9 @@ export default function PlatformView() {
     const games = useLoaderData();
     const id = useParams().id;
 
-    /* const API_KEY = import.meta.env.VITE_API_KEY;
-    const platform = useFetch(`https://api.rawg.io/api/platforms/${id}?key=${API_KEY}`);
-
-    console.log(platform); */
-    
     return (
         <>
-            <Header title={`Piattaforma: ${id}`}></Header>
+            <Header title="Search for your Platform"></Header>
             <ListGames games={games} />
         </>
     )

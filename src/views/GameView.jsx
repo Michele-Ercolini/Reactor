@@ -14,7 +14,7 @@ export default function GameView() {
     return (
         <>
             <Navbar />
-            <Detail game={game} achievements={achievements && achievements.results}/>
+            <Detail game={game} achievements={achievements && achievements.results} />
         </>
     )
 }

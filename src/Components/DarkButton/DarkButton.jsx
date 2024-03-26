@@ -4,13 +4,13 @@ import { DarkContext } from "../../Contexts/Contexts"
 
 export default function DarkButton() {
 
-    const {handleDark} = useContext(DarkContext);
+    const { handleDark } = useContext(DarkContext);
 
-    const {dark} = useContext(DarkContext);
+    const { dark } = useContext(DarkContext);
     return (
         <div>
             <label htmlFor="switch" className={classes.toggle + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
-                <input type="checkbox" className={classes.input} id="switch" onChange={handleDark}/>
+                <input type="checkbox" className={classes.input} id="switch" onChange={handleDark} />
                 <div className={`${classes.icon} ${classes["icon--moon"]}`}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

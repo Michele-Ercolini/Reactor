@@ -9,7 +9,7 @@ export default function Homepage() {
     const games = useLoaderData();
 
     const { dark } = useContext(DarkContext);
-    
+
     return (
         <>
             <div className={"body"}>
@@ -18,7 +18,7 @@ export default function Homepage() {
                 <div className="d-flex justify-content-center justify-content-md-end me-md-5 my-4">
                     <Link to={routes.games} className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                         <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                        <span className={"text"}>Vedi tutti i giochi</span>
+                        <span className={"text"}>See all games</span>
                         <span className={"bottom_key_1" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                         <span className={"bottom_key_2" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                     </Link>

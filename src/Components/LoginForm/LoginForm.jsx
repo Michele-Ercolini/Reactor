@@ -49,7 +49,7 @@ export default function LoginForm() {
                 </button>
             </div>
             <div className={classes.auth}>
-                <p className='text-center'>Non sei ancora registrato?<Link className={classes.link} to={routes.signup}>SignUp</Link></p>
+                <p className='text-center'>Not registered yet?<Link className={classes.link} to={routes.signup}>SignUp</Link></p>
             </div>
         </form>
     )

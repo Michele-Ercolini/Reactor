@@ -22,7 +22,7 @@ export default function DropdownUser({ removeNavbar }) {
         removeNavbar();
     }
 
-    const handleSignOut = ()=>{
+    const handleSignOut = () => {
         signOut();
         handleDropdown();
     }
@@ -37,13 +37,13 @@ export default function DropdownUser({ removeNavbar }) {
                 <div className={classes.dropdown_content}>
                     {!profile ?
                         <>
-                            <Link to={routes.login} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Accedi</Link>
-                            <Link to={routes.signup} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Registrati</Link>
+                            <Link to={routes.login} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Login</Link>
+                            <Link to={routes.signup} className={(dark ? " dark" : " light")} onClick={handleDropdown}>Sign Up</Link>
                         </>
                         :
                         <>
-                        <Link to={routes.profile} className={(dark ? " dark" : " light")}>Profile</Link>
-                        <Link to={routes.home} className={(dark ? " dark" : " light")} onClick={handleSignOut}>Logout</Link>
+                            <Link to={routes.profile} className={(dark ? " dark" : " light")}>Profile</Link>
+                            <Link to={routes.home} className={(dark ? " dark" : " light")} onClick={handleSignOut}>Logout</Link>
                         </>
                     }
                 </div>

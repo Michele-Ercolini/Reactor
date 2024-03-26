@@ -58,12 +58,12 @@ export default function SettingsForm() {
 
     return (
         <form className="wrapper" onSubmit={handleSubmit}>
-            <h1 className='text-center'>Modifica</h1>
+            <h1 className='text-center'>Edit Profile</h1>
             <div className="inputBox">
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Nome' name='first_name' onChange={handleChange} />
+                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Name' name='first_name' onChange={handleChange} />
             </div>
             <div className="inputBox">
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Cognome' name='last_name' onChange={handleChange} />
+                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Surname' name='last_name' onChange={handleChange} />
             </div>
             <div className="inputBox">
                 <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Username' name='username' onChange={handleChange} />
@@ -81,13 +81,13 @@ export default function SettingsForm() {
             <div className="d-flex justify-content-end my-5">
                 <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                     <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                    <span className="text">Modifica!</span>
+                    <span className="text">Edit!</span>
                     <span className={"bottom_key_1" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                     <span className={"bottom_key_2" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                 </button>
             </div>
             <div className="auth">
-                <p className='text-center p-0'>Non vuoi modificare?<Link className="link" to={routes.profile}>Torna indietro</Link></p>
+                <p className='text-center p-0'>Don't want to edit?<Link className="link" to={routes.profile}>Go Back</Link></p>
             </div>
         </form>
     )

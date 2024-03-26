@@ -6,7 +6,7 @@ export default function AchievementCard({ achievement }) {
             <div className={classes.card_body + " d-flex flex-column justify-content-between"}>
                 <h3 className="card-title">{achievement.name}</h3>
                 <p className="card-text text-center">{achievement.description}</p>
-                <h6 className='text-end me-5'>Rarità: {achievement.percent}%</h6>
+                <h6 className='text-end me-5 fs-4'>Rarity: {achievement.percent}%</h6>
             </div>
         </div>
     )

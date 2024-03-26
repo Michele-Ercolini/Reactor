@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from 'react'
 import classes from './../Detail/Detail.module.css'
 import { DarkContext, UserContext } from '../../Contexts/Contexts'
 import supabase from '../../database/supabase';
+import Sora from '../../../public/media/Sora.jpg'
+
 export default function LiveChat({ game }) {
 
-    const {dark} =useContext(DarkContext);
+    const { dark } = useContext(DarkContext);
     const { profile } = useContext(UserContext);
 
     const [userMessage, setUserMessage] = useState();
@@ -77,8 +79,8 @@ export default function LiveChat({ game }) {
                 </div>
             </div>
             <div className="d-flex justify-content-between">
-                <input type="text" className={classes.chat_input + (dark ? ' dark' : ' light')} placeholder='Messaggio' value={userMessage} onChange={handleChange} />
-                <button className={classes.chat_btn} onClick={handleClick}>Invia</button>
+                <input type="text" className={classes.chat_input + (dark ? ' dark' : ' light')} placeholder='Message' value={userMessage} onChange={handleChange} />
+                <button className={classes.chat_btn} onClick={handleClick}>Send</button>
             </div>
         </div>
     )

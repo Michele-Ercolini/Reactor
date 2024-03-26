@@ -148,6 +148,10 @@
     font-size: 1.3rem;
 }
 
+.genres a{
+    font-size: 1.5rem;
+}
+
 /* Buttons */
 
 .btn_outline {

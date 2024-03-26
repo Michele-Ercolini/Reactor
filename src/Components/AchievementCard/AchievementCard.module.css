@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: 45vh;
     word-wrap: break-word;
     background-clip: border-box;
     border-radius: 50px 0;
@@ -14,7 +14,7 @@
 
 
 .card_body{
-    height: 15vh;
+    height: 20vh;
     padding: 1rem;
 }
 

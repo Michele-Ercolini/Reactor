@@ -73,7 +73,7 @@ export default function SignUpForm() {
                 </button>
             </div>
             <div className="auth">
-                <p className='text-center'>Sei già registrato?<Link className="link" to={routes.login}>Login</Link></p>
+                <p className='text-center'>Are you already registered?<Link className="link" to={routes.login}>Login</Link></p>
             </div>
         </form>
     )

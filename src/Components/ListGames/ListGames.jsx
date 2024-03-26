@@ -1,7 +1,7 @@
 import Card from "../Card/Card"
 import classes from './ListGames.module.css'
 
-export default function ListGames({games}) {
+export default function ListGames({ games }) {
     return (
         <div className="container">
             <div className="row">
