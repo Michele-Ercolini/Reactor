@@ -53,6 +53,10 @@
     z-index: 2;
 }
 
+.optionIcon:hover{
+    cursor: pointer;
+}
+
 /* Backgorund profile image */
 
 .wrapper {

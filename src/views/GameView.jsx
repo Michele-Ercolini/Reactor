@@ -11,7 +11,6 @@ export default function GameView() {
     const API_KEY = import.meta.env.VITE_API_KEY;
     const achievements = useFetch(`https://api.rawg.io/api/games/${id}/achievements?key=${API_KEY}`);
 
-    console.log(achievements);
     return (
         <>
             <Navbar />

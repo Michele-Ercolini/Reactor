@@ -11,6 +11,7 @@ import LoginView from "./views/Auth/LoginView";
 import ProfileView from "./views/Auth/ProfileView";
 import SettingsView from "./views/Auth/SettingsView";
 import PlatformView, { gamesByPlatformLoader } from "./views/PlatformView";
+import SearchView from "./views/SearchView";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                 path: routes.platform,
                 element: <PlatformView />,
                 loader: gamesByPlatformLoader
+            },
+            {
+                path: routes.search,
+                element: <SearchView />
             }
         ]
     },

@@ -4,6 +4,7 @@ const routes = {
     game: '/game/:id',
     genre: '/genre/:slug',
     platform: '/platform/:id',
+    search: '/search',
     auth: '/auth',
     signup: '/auth/signup',
     login: '/auth/login',

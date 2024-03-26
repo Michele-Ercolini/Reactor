@@ -1,0 +1,9 @@
+.btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.5rem;
+}

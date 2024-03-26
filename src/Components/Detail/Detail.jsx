@@ -87,7 +87,7 @@ export default function Detail({ game, achievements }) {
                         <div className="d-xxl-flex justify-content-xxl-between">
                             <p className="d-block text-center mb-0">Buy here:</p>
                             <div className="text-center">
-                                {game.stores.map(store => {
+                                {game.stores.slice(0,4).map(store => {
                                     return (
                                         <a key={store.id} href={`https://${store.store.domain}`} target="blank" className={`btn mx-1 ${classes.btn_outline} ` + (dark ? 'text-secondaryColor' : 'text-primaryColor')}>{store.store.name}</a>
                                     )

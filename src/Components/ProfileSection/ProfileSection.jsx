@@ -149,7 +149,7 @@ export default function ProfileSection() {
                     </div>
                 </div>
                 <div className="col-7 col-sm-6 offset-sm-1 text-end">
-                    <h2 className='mb-3'>LE TUE RECENSIONI</h2>
+                    <h2 className='my-3'>LE TUE RECENSIONI</h2>
                     <ul className={'list-unstyled ' + classes.reviews}>
                         {userReviews && userReviews.map(review => {
                             return (
