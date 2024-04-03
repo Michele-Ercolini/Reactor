@@ -67,7 +67,7 @@ export default function SignUpForm() {
             <div className="d-flex justify-content-center justify-content-md-end my-5">
                 <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                     <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                    <span className="text">Registrati!</span>
+                    <span className="text">Register!</span>
                     <span className={"bottom_key_1" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                     <span className={"bottom_key_2" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                 </button>

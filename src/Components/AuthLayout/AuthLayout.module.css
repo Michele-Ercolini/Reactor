@@ -11,5 +11,5 @@
 }
 
 .height100{
-    height: calc(100vh - 12vh);
+    height: calc(100vh - 80px);
 }

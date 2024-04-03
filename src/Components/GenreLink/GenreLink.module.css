@@ -3,99 +3,109 @@
     text-decoration: none;
     font-size: 1.6rem;
     z-index: 1;
+    transition: 0.1s;
 }
 
-.sidebar_item:nth-child(1):hover~span {
+.sidebar_item:hover{
+    color: var(--accent2Color);
+}
+
+.sidebar_item:active{
+    color: var(--secondaryColor);
+    transition: .5s;
+}
+
+.sidebar_item:nth-child(1):active~span {
     height: 2.6rem;
     top: 4.8rem;
 }
 
-.sidebar_item:nth-child(2):hover~span {
+.sidebar_item:nth-child(2):active~span {
     height: 2.6rem;
     top: 7.6rem;
 }
 
-.sidebar_item:nth-child(3):hover~span {
+.sidebar_item:nth-child(3):active~span {
     height: 2.6rem;
     top: 10.5rem;
 }
 
-.sidebar_item:nth-child(4):hover~span {
+.sidebar_item:nth-child(4):active~span {
     height: 2.6rem;
     top: 13.3rem;
 }
 
-.sidebar_item:nth-child(5):hover~span {
+.sidebar_item:nth-child(5):active~span {
     height: 2.6rem;
     top: 16.2rem;
 }
 
-.sidebar_item:nth-child(6):hover~span {
+.sidebar_item:nth-child(6):active~span {
     height: 2.6rem;
     top: 19rem;
 }
 
-.sidebar_item:nth-child(7):hover~span {
+.sidebar_item:nth-child(7):active~span {
     height: 2.6rem;
     top: 21.9rem;
 }
 
-.sidebar_item:nth-child(8):hover~span {
+.sidebar_item:nth-child(8):active~span {
     height: 2.6rem;
     top: 24.7rem;
 }
 
-.sidebar_item:nth-child(9):hover~span {
+.sidebar_item:nth-child(9):active~span {
     height: 2.6rem;
     top: 27.6rem;
 }
 
-.sidebar_item:nth-child(10):hover~span {
+.sidebar_item:nth-child(10):active~span {
     height: 2.6rem;
     top: 30.4rem;
 }
 
-.sidebar_item:nth-child(11):hover~span {
+.sidebar_item:nth-child(11):active~span {
     height: 2.6rem;
     top: 33.3rem
 }
 
-.sidebar_item:nth-child(12):hover~span {
+.sidebar_item:nth-child(12):active~span {
     height: 2.6rem;
     top: 36.1rem;
 }
 
-.sidebar_item:nth-child(13):hover~span {
+.sidebar_item:nth-child(13):active~span {
     height: 2.6rem;
     top: 39rem
 }
 
-.sidebar_item:nth-child(14):hover~span {
+.sidebar_item:nth-child(14):active~span {
     height: 2.6rem;
     top: 41.8rem;
 }
 
-.sidebar_item:nth-child(15):hover~span {
+.sidebar_item:nth-child(15):active~span {
     height: 2.6rem;
     top: 44.7rem;
 }
 
-.sidebar_item:nth-child(16):hover~span {
+.sidebar_item:nth-child(16):active~span {
     height: 2.6rem;
     top: 47.5rem;
 }
 
-.sidebar_item:nth-child(17):hover~span {
+.sidebar_item:nth-child(17):active~span {
     height: 2.6rem;
     top: 50.4rem;
 }
 
-.sidebar_item:nth-child(18):hover~span {
+.sidebar_item:nth-child(18):active~span {
     height: 2.6rem;
     top: 53.2rem;
 }
 
-.sidebar_item:nth-child(19):hover~span {
+.sidebar_item:nth-child(19):active~span {
     height: 2.6rem;
     top: 56.1rem;
 }

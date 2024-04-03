@@ -68,16 +68,6 @@ export default function SettingsForm() {
             <div className="inputBox">
                 <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="text" placeholder='Username' name='username' onChange={handleChange} />
             </div>
-
-            {/* AvatarForm */}
-            <div className={classes.fileBox}>
-                <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="file" onChange={fileChange} />
-            </div>
-            <div className={"position-relative " + (!preview && 'd-none')}>
-                <img src={preview} alt="Preview Immagine" className={classes.img_custom} />
-            </div>
-            {/* !AvatarForm */}
-
             <div className="d-flex justify-content-end my-5">
                 <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                     <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>

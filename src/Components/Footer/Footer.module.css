@@ -5,3 +5,7 @@
 .border{
     box-shadow: 0px 2px 5px var(--accent2Color);
 }
+
+a:hover{
+    color: var(--accentColor) ;
+}

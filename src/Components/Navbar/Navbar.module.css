@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
+    height: 80px;
     padding: 0;
     box-shadow: 2px 0px 5px var(--accent2Color);
     transition: all .5s;
@@ -26,7 +26,7 @@ li>ul>li>a {
 }
 
 .navLogo {
-    width: 21vh;
+    width: 140px;
 }
 
 /* Navbar */
@@ -52,11 +52,6 @@ header .nav_btn {
 }
 
 .username {
-    position: absolute;
-    text-align: center;
-    width: auto;
-    top: 0.5rem;
-    right: 2rem;
     color: var(--accent2Color);
     text-transform: uppercase;
     font-size: 1.5rem;

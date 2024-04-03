@@ -4,55 +4,93 @@ import { DarkContext, UserContext } from '../../Contexts/Contexts'
 import { Link } from 'react-router-dom';
 import routes from '../../routes';
 import Sora from '../../../public/media/Sora.jpg'
-import { GrUploadOption } from "react-icons/gr";
+import { GrEdit } from "react-icons/gr";
 import supabase from '../../database/supabase';
 
 export default function ProfileSection() {
 
     const { dark } = useContext(DarkContext);
     const { user, profile, getUser } = useContext(UserContext);
-    const [isOpen, setIsOpen] = useState(false);
-    const [file, setFile] = useState();
-    const [preview, setPreview] = useState();
+    const [isOpenBgImage, setIsOpenBgImage] = useState(false);
+    const [isOpenProfileImage, setIsOpenProfileImage] = useState(false);
+    const [fileBg, setFileBg] = useState();
+    const [fileProfile, setFileProfile] = useState();
+    const [previewBg, setPreviewBg] = useState();
+    const [previewProfile, setPreviewProfile] = useState();
     const [userFavourites, setUserFavourites] = useState();
     const [userReviews, setUserReviews] = useState();
 
     /* apre e chiude carica immagine di background */
-    const toggleChange = () => {
-        setIsOpen(() => !isOpen);
+    const toggleBgChange = () => {
+        setIsOpenBgImage(() => !isOpenBgImage);
     }
     /* chiude carica immagine di background */
-    const closeChange = () => {
-        setIsOpen(() => false);
+    const closeBgChange = () => {
+        setIsOpenBgImage(() => false);
     }
 
-    /* immagine profilo */
-    const fileChange = (e) => {
-        setFile(() => e.target.files[0]);
+    /* immagine Background */
+    const fileBgChange = (e) => {
+        setFileBg(() => e.target.files[0]);
     }
     useEffect(
         () => {
-            if (file) {
-                const imageUrl = URL.createObjectURL(file);
-                setPreview(() => imageUrl);
+            if (fileBg) {
+                const imageUrl = URL.createObjectURL(fileBg);
+                setPreviewBg(() => imageUrl);
             }
-        }, [file]
+        }, [fileBg]
+    )
+
+    /* apre e chiude carica immagine di background */
+    const toggleProfileChange = () => {
+        setIsOpenProfileImage(() => !isOpenProfileImage);
+    }
+    /* chiude carica immagine di background */
+    const closeProfileChange = () => {
+        setIsOpenProfileImage(() => false);
+    }
+
+    /* immagine Background */
+    const fileProfileChange = (e) => {
+        setFileProfile(() => e.target.files[0]);
+    }
+
+    useEffect(
+        () => {
+            if (fileProfile) {
+                const imageProfileUrl = URL.createObjectURL(fileProfile);
+                setPreviewProfile(() => imageProfileUrl);
+            }
+        }, [fileProfile]
     )
 
     /* onSubmit */
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (preview) {
-            const fileExt = file.name.split('.').pop(); //restituisce solo l'estensione del file
-            const fileName = `${profile.id}${Math.random()}.${fileExt}`;
-            await supabase.storage.from('avatars').upload(fileName, file);
+        if (previewBg) {
+            const fileBgExt = fileBg.name.split('.').pop(); //restituisce solo l'estensione del file
+            const fileBgName = `${profile.id}${Math.random()}.${fileBgExt}`;
+            await supabase.storage.from('avatars').upload(fileBgName, fileBg);
             await supabase
                 .from('profiles')
-                .upsert({ id: profile.id, avatar_background_url: fileName })
+                .upsert({ id: profile.id, avatar_background_url: fileBgName })
                 .select()
             await getUser();
-            await setPreview(null);
-            await closeChange();
+            await setPreviewBg(null);
+            await closeBgChange();
+        }
+        if (previewProfile) {
+            const fileProfileExt = fileProfile.name.split('.').pop(); //restituisce solo l'estensione del file
+            const fileProfileName = `${profile.id}${Math.random()}.${fileProfileExt}`;
+            await supabase.storage.from('avatars').upload(fileProfileName, fileProfile);
+            await supabase
+                .from('profiles')
+                .upsert({ id: profile.id, avatar_url: fileProfileName })
+                .select()
+            await getUser();
+            await setPreviewProfile(null);
+            await closeProfileChange();
         }
     }
 
@@ -61,7 +99,7 @@ export default function ProfileSection() {
         let { data: favourites, error } = await supabase
             .from('favourites')
             .select()
-            .eq('profile_id',  profile.id)
+            .eq('profile_id', profile.id)
 
         setUserFavourites(favourites);
     }
@@ -78,7 +116,7 @@ export default function ProfileSection() {
         let { data: reviews, error } = await supabase
             .from('reviews')
             .select()
-            .eq('profile_id',  profile.id)
+            .eq('profile_id', profile.id)
 
         setUserReviews(reviews);
     }
@@ -89,20 +127,36 @@ export default function ProfileSection() {
         backgroundPosition: profile ? 'center' : 'initial',
         backgroundSize: profile ? 'cover' : 'initial',
         backgroundRepeat: profile ? 'no-repeat' : 'initial',
-        backgroundImage:  profile.avatar_background_url ? `url(${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_background_url})` : `url(${Sora})`,
+        backgroundImage: profile.avatar_background_url ? `url(${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_background_url})` : `url(${Sora})`,
     };
+
+    const profileStyle = {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "150px",
+        height: "150px",
+        borderRadius: "50%",
+        border: "10px solid var(--accentColor)",
+        zIndex: "1",
+        backgroundPosition: profile ? 'center' : 'initial',
+        backgroundSize: profile ? 'cover' : 'initial',
+        backgroundRepeat: profile ? 'no-repeat' : 'initial',
+        backgroundImage: profile.avatar_url ? `url(${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_url})` : `url(${Sora})`,
+    }
 
     return (
         <div className={classes.card + " container-fluid p-0"}>
             <div className='position relative' style={containerStyle}>
-                <GrUploadOption color='var(--accent2Color)' size="3rem" className={classes.optionIcon} onClick={toggleChange} />
-                {/* AvatarForm */}
-                <div className={"position-relative " + (!isOpen && 'd-none')}>
-                    <img src={preview} alt="Preview Immagine" className={classes.img_custom} />
+                <GrEdit color='var(--accentColor)' size="3rem" className={classes.optionIcon} onClick={toggleBgChange} />
+                {/* BackgroundForm */}
+                <div className={"position-relative " + (!isOpenBgImage && 'd-none')}>
+                    <img src={previewBg} alt="PreviewBg Immagine" className={classes.img_custom} />
                 </div>
-                <form className={`${classes.wrapper} ${(!isOpen && 'd-none')}`} onSubmit={handleSubmit}>
+                <form className={`${classes.wrapper} ${(!isOpenBgImage && 'd-none')}`} onSubmit={handleSubmit}>
                     <div className={classes.fileBox}>
-                        <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="file" onChange={fileChange} />
+                        <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="file" onChange={fileBgChange} />
                     </div>
                     <div className="my-2">
                         <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
@@ -113,9 +167,29 @@ export default function ProfileSection() {
                         </button>
                     </div>
                 </form>
+                {/* !BackgroundForm */}
+                {/* AvatarForm */}
+                <form className={`${classes.wrapperProfile} ${(!isOpenProfileImage && 'd-none')}`} onSubmit={handleSubmit}>
+                    <div className={classes.fileBoxProfile}>
+                        <input className={(dark ? ' text-secondaryColor' : ' text-primaryColor')} type="file" onChange={fileProfileChange} />
+                    </div>
+                    <div className="my-2">
+                        <button className={"fancy" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
+                            <span className={"top_key" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                            <span className="text">Upload!</span>
+                            <span className={"bottom_key_1" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                            <span className={"bottom_key_2" + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div style={profileStyle}>
+                <GrEdit color='var(--accentColor)' size="3rem" className={classes.optionIconProfile} onClick={toggleProfileChange} />
+                <div className={"position-relative " + (!isOpenProfileImage && 'd-none')}>
+                    <img src={previewProfile} alt="" className={classes.img_profile_custom} />
+                </div>
                 {/* !AvatarForm */}
             </div>
-            <img src={profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${profile.avatar_url}` : Sora} className={classes.profilo} alt="Foto del profilo" />
             <div className={classes.info + ' row px-3 px-sm-5 pt-3'}>
                 <div className="col-5 d-flex flex-column justify-content-between">
 

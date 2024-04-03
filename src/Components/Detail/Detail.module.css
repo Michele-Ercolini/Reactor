@@ -10,11 +10,13 @@
 
 .description_shadow {
     border-radius: 50px;
-    box-shadow: inset -20px -20px 60px var(--accentColor),
-        inset 20px 20px 60px var(--accent2Color);
+    background: transparent;
+    
     overflow: hidden;
     border: 2px solid var(--accent2Color);
     margin: 1rem 1rem 0.3rem 1rem;
+    backdrop-filter: blur(10px);
+    color: var(--secondaryColor);
 }
 
 .description {
@@ -144,11 +146,11 @@
     font-size: 1.3rem;
 }
 
-.inf_section a{
+.inf_section a {
     font-size: 1.3rem;
 }
 
-.genres a{
+.genres a {
     font-size: 1.5rem;
 }
 
@@ -172,7 +174,7 @@
 
 /* Swiper */
 
-.slide{
+.slide {
     width: 70%;
 }
 
@@ -198,12 +200,12 @@
         padding: 0.3rem 1rem 1rem 1rem;
     }
 
-    .inf_section{
+    .inf_section {
         font-size: 1rem;
         padding: 0.3rem 1rem 1rem 1rem;
     }
 
-    .inf_section a{
+    .inf_section a {
         font-size: 1rem;
     }
 }

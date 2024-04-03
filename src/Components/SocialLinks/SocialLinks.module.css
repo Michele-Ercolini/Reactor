@@ -58,38 +58,10 @@
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-    background: linear-gradient(120deg, #3b5998, #f1f1f1);
+.wrapper .icon:hover,
+.wrapper .icon:hover .tooltip,
+.wrapper .icon:hover .tooltip::before {
+    background: linear-gradient(120deg, var(--accent2Color), var(--secondaryColor), var(--accentColor) );
+    color: var(--primaryColor);
 }
 
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: linear-gradient(120deg, #66757f, #00ACEE, #36D8FF, #f5f8fa );
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(120deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-}
-
-.wrapper .twitch:hover,
-.wrapper .twitch:hover .tooltip,
-.wrapper .twitch:hover .tooltip::before {
-    background:linear-gradient(120deg, #6441a5, #b9a3e3, #f1f1f1);
-}
-
-.wrapper .discord:hover,
-.wrapper .discord:hover .tooltip,
-.wrapper .discord:hover .tooltip::before {
-    background:linear-gradient(120deg, #7289da, #99aab5, #2c2f33);
-}
-
-.wrapper .github:hover,
-.wrapper .github:hover .tooltip,
-.wrapper .github:hover .tooltip::before {
-    background: linear-gradient(120deg, #4078c0, #6e5494, #bd2c00, #c9510c, #6cc644, #fafafa);
-}

@@ -31,7 +31,6 @@ export default function Navbar() {
             <Link className="navbar-brand ms-5" to={routes.home}><img src={Logo} className={classes.navLogo + " img-fluid"} alt="Logo" /></Link>
             <div className="d-flex align-items-center">
                 <nav ref={navRef} className={(dark ? "dark" : "light")}>
-                    {profile && <h6 className={classes.username}>{profile.username}</h6>}
                     <Searchbar />
                     <DarkButton />
                     {/* <div className="ms-lg-5">
@@ -41,6 +40,7 @@ export default function Navbar() {
                     <button className={`${classes.nav_btn} ${classes.nav_close_btn}`} onClick={showNavbar}>
                         <FaTimes color={"var(--accent2Color)"} />
                     </button>
+                    {profile && <h6 className={classes.username + " text-center"}>{profile.username}</h6>}
                 </nav>
                 <button className={classes.nav_btn} onClick={showNavbar}>
                     <FaBars color={"var(--accent2Color)"} />
