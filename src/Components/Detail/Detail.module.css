@@ -61,7 +61,7 @@
     font-size: 1.3rem;
 }
 
-.form{
+.form {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -75,12 +75,13 @@
     font-size: 1.3rem;
 }
 
-.reviews_input:focus{
-    outline: none; 
-    border-color: var(--accent2Color); 
+.reviews_input:focus {
+    outline: none;
+    border-color: var(--accent2Color);
     box-shadow: inset -5px 5px 10px transparent,
         inset 0px -2px 5px var(--accent2Color);
 }
+
 .reviews_btn {
     border: var(--accent2Color);
     background-color: var(--accent2Color);
@@ -89,7 +90,17 @@
     width: 15%;
 }
 
-.reviews_btn:hover{
+@media screen and (max-width:767px) {
+    .reviews_input {
+        width: 70%;
+    }
+
+    .reviews_btn {
+        width: 30%;
+    }
+}
+
+.reviews_btn:hover {
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -136,9 +147,9 @@
     font-size: 1.3rem;
 }
 
-.chat_input:focus{
-    outline: none; 
-    border-color: var(--accent2Color); 
+.chat_input:focus {
+    outline: none;
+    border-color: var(--accent2Color);
     box-shadow: inset -5px 5px 10px transparent,
         inset 0px -2px 5px var(--accent2Color);
 }
@@ -151,7 +162,7 @@
     width: 30%;
 }
 
-.chat_btn:hover{
+.chat_btn:hover {
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -179,4 +190,3 @@
     --bs-btn-disabled-border-color: var(--accent2Color) !important;
     --bs-gradient: none;
 }
-
