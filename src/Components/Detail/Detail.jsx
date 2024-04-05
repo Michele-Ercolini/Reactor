@@ -74,7 +74,13 @@ export default function Detail({ game, achievements }) {
                         <div className="row">
                             <div className="col-12 col-xl-8">
                                 {/* Bento 5 */}
-                                {profile && <Reviews game={game} />}
+                                <div className={classes.height32 + " position-relative mb-3 " + classes.shadow_custom}>
+                                    {profile &&
+                                        <Reviews game={game} />
+                                        ||
+                                        <h2 className="text-center mt-3">Login for Reviews</h2>
+                                    }
+                                </div>
                             </div>
                             <div className="col-12 col-xl-4">
                                 {/* Bento 6 */}
@@ -104,7 +110,13 @@ export default function Detail({ game, achievements }) {
                             </div>
                         </div>
                         {/* Bento 8 */}
-                        {profile && <LiveChat game={game} />}
+                        <div className={classes.height43 + " position-relative mb-3 " + classes.shadow_custom}>
+                            {profile &&
+                                <LiveChat game={game} />
+                                ||
+                                <h2 className="text-center mt-3">Login for Chat</h2>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,8 +132,8 @@ export default function Detail({ game, achievements }) {
                 }
             }>
                 {achievements && achievements.length > 0 &&
-                    <div className="row justify-content-center mx-5">
-                        <div className="col-12 col-xxl-7">
+                    <div className="row justify-content-center mx-0">
+                        <div className="col-12 col-md-10 col-xl-7">
                             <h2 className={"text-center " + (dark ? ' text-secondaryColor' : ' text-primaryColor')}>Achievements</h2>
 
                             {/* Swiper */}

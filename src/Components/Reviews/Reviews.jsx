@@ -45,7 +45,7 @@ export default function Reviews({ game }) {
     )
 
     return (
-        <div className={classes.height32 + " position-relative mb-3 " + classes.shadow_custom}>
+        <>
             <div className={classes.reviews_section}>
                 <h2 className='text-center mt-2'>Game Reviews</h2>
                 {reviews && reviews.map(review => {
@@ -67,6 +67,6 @@ export default function Reviews({ game }) {
                 <input type="text" className={classes.reviews_input + (dark ? ' dark' : ' light')} placeholder='Your Review' value={review} onChange={handleChange} />
                 <button className={classes.reviews_btn} onClick={handleClick}>Enter</button>
             </div>
-        </div>
+        </>
     )
 }

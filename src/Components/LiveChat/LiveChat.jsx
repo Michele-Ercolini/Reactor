@@ -59,7 +59,7 @@ export default function LiveChat({ game }) {
     )
 
     return (
-        <div className={classes.height43 + " position-relative mb-3 " + classes.shadow_custom}>
+        <>
             <div className={classes.chat_section}>
                 <h2 className='text-center mt-2'>Live Chat</h2>
                 {messages && messages.map(message => {
@@ -80,7 +80,6 @@ export default function LiveChat({ game }) {
                 <input type="text" className={classes.chat_input + (dark ? ' dark' : ' light')} placeholder='Message' value={userMessage} onChange={handleChange} />
                 <button className={classes.chat_btn} onClick={handleClick}>Send</button>
             </div>
-
-        </div>
+        </>
     )
 }
