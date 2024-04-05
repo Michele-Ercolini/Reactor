@@ -10,7 +10,7 @@ export default function PlatformView() {
 
     return (
         <>
-            <Header title="Search for your Platform"></Header>
+            <Header title="Results"></Header>
             <ListGames games={games} />
         </>
     )

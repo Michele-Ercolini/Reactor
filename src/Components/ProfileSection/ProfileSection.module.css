@@ -49,13 +49,19 @@
 
 .optionIconProfile {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: -60px;
     z-index: 2;
 }
 
 .optionIcon:hover{
     cursor: pointer;
+    border-bottom: 3px solid var(--accentColor);
+}
+
+.optionIconProfile:hover{
+    cursor: pointer;
+    border-bottom: 3px solid var(--accentColor);
 }
 
 /* Backgorund profile image */

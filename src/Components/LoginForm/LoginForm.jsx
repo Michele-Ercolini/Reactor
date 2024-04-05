@@ -43,7 +43,7 @@ export default function LoginForm() {
             <div className="d-flex justify-content-center justify-content-md-end my-5">
                 <button className={classes.fancy + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}>
                     <span className={classes.top_key + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
-                    <span className={classes.text}>Entra!</span>
+                    <span className={classes.text}>Login!</span>
                     <span className={classes.bottom_key_1 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                     <span className={classes.bottom_key_2 + (dark ? ' bg-primaryColor' : ' bg-secondaryColor')}></span>
                 </button>

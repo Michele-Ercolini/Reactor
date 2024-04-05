@@ -1,12 +1,3 @@
-.offcanvas{
-    background-color: var(--primaryColor)!important;
-}
-
-.wrapper{
-    height: 100vh;
-    overflow-y: auto;
-}
-
 .sign {
     width: 100%;
     transition-duration: .3s;

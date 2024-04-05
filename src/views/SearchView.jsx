@@ -11,7 +11,7 @@ export default function SearchView() {
 
     return (
         <>
-            <Header title='I risultati della tua ricerca' />
+            <Header title='Results' />
             <ListGames games={games} />
         </>
     );

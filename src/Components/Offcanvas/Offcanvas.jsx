@@ -12,7 +12,7 @@ export default function Offcanvas() {
 
     const API_KEY = import.meta.env.VITE_API_KEY;
 
-    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}&page_size=18`);
+    const genres = useFetch(`https://api.rawg.io/api/genres?key=${API_KEY}&page_size=18&ordering=name`);
 
     const platforms = useFetch(`https://api.rawg.io/api/platforms?key=${API_KEY}&page_size=12`);
 
@@ -29,7 +29,7 @@ export default function Offcanvas() {
                 <IoIosArrowForward color={"var(--accent2Color)"} size="2rem" />
                 {/* <div className={classes.text}>Generi</div> Si dovrebbe vedere sull'hover, ma per smartphone/tablet risulta inutile */}
             </button>
-            <div className={"offcanvas offcanvas-start " + (dark ? "dark" : "light")} data-bs-scroll="true" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div className={"offcanvas offcanvas-start " + (dark ? "dark" : "light")} data-bs-scroll="false" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header pb-3 d-flex justify-content-around align-items-center">
 
                     <h5 className={!isChecked ? classes.title : classes.subtitle}>Genres</h5>
