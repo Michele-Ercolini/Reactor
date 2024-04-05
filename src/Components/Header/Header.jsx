@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Offcanvas from "../Offcanvas/Offcanvas";
 import classes from './Header.module.css'
 
-export default function Header({ title = "Featured & Recommended", subtitle = "" }) {
+export default function Header({ title = "Recommended", subtitle = "" }) {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
