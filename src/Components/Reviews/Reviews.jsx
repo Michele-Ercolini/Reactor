@@ -45,28 +45,25 @@ export default function Reviews({ game }) {
     )
 
     return (
-        <div className={`col-12 col-md-8 offset-md-4 ${classes.height28}`}>
-            <div className={classes.reviews_shadow}>
-                <div className={classes.reviews_section}>
-                    <h2 className='text-center'>Game Reviews</h2>
-                    {reviews && reviews.map(review => {
-                        return (
-                            <div key={review.id}>
-                                <div className='d-flex justify-content-between align-items-end' >
-                                    <p>{review.review}</p>
-                                    <div className='d-flex'>
-                                        <p className='my-auto'>{review.profile.username}</p>
-                                        <img src={profile && profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${review.profile.avatar_url}` : Sora} className={classes.chat_img + ' rounded-circle'} alt="immagine profilo" />
-                                    </div>
+        <div className={classes.height32 + " position-relative mb-3 " + classes.shadow_custom}>
+            <div className={classes.reviews_section}>
+                <h2 className='text-center mt-2'>Game Reviews</h2>
+                {reviews && reviews.map(review => {
+                    return (
+                        <div key={review.id}>
+                            <div className='d-flex justify-content-between align-items-end' >
+                                <p>{review.review}</p>
+                                <div className='d-flex'>
+                                    <p className='my-auto'>{review.profile.username}</p>
+                                    <img src={profile && profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${review.profile.avatar_url}` : Sora} className={classes.chat_img + ' rounded-circle'} alt="immagine profilo" />
                                 </div>
-                                <hr />
                             </div>
-                        )
-                    })}
-                </div>
-
+                            <hr />
+                        </div>
+                    )
+                })}
             </div>
-            <div className='d-flex justify-content-between'>
+            <div className={classes.form + ' d-flex justify-content-between'}>
                 <input type="text" className={classes.reviews_input + (dark ? ' dark' : ' light')} placeholder='Your Review' value={review} onChange={handleChange} />
                 <button className={classes.reviews_btn} onClick={handleClick}>Enter</button>
             </div>

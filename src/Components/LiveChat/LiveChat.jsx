@@ -59,29 +59,28 @@ export default function LiveChat({ game }) {
     )
 
     return (
-        <div className={"col-12 " + classes.chat_height}>
-            <div className={classes.chat_shadow}>
-                <div className={classes.chat_section}>
-                    <h2 className='text-center'>Live Chat</h2>
-                    {messages && messages.map(message => {
-                        return (
-                            <div key={message.id}>
-                                <p>{message.message}</p>
-                                <div className="d-flex justify-content-end">
-                                    <p className='my-auto'>{message.profile.username}</p>
-                                    <img src={profile && profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${message.profile.avatar_url}` : Sora} className={classes.chat_img + ' rounded-circle'} alt="immagine profilo" />
-                                </div>
-                                <hr />
+        <div className={classes.height43 + " position-relative mb-3 " + classes.shadow_custom}>
+            <div className={classes.chat_section}>
+                <h2 className='text-center mt-2'>Live Chat</h2>
+                {messages && messages.map(message => {
+                    return (
+                        <div key={message.id}>
+                            <p>{message.message}</p>
+                            <div className="d-flex justify-content-end">
+                                <p className='my-auto'>{message.profile.username}</p>
+                                <img src={profile && profile.avatar_url ? `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/avatars/${message.profile.avatar_url}` : Sora} className={classes.chat_img + ' rounded-circle'} alt="immagine profilo" />
                             </div>
-                        )
-                    })
-                    }
-                </div>
+                            <hr />
+                        </div>
+                    )
+                })
+                }
             </div>
-            <div className="d-flex justify-content-between">
+            <div className={classes.form + ' d-flex justify-content-between'}>
                 <input type="text" className={classes.chat_input + (dark ? ' dark' : ' light')} placeholder='Message' value={userMessage} onChange={handleChange} />
                 <button className={classes.chat_btn} onClick={handleClick}>Send</button>
             </div>
+
         </div>
     )
 }

@@ -26,23 +26,3 @@
     font-size: 1rem;
     transition: .5s;
 }
-
-
-/* .sidebar_item::after{
-    content: "";
-    position: absolute;
-    background-color: var(--accentColor);
-    height: 2px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-.sidebar_item:hover{
-    color: var(--accent2Color);
-}
-
-.sidebar_item:hover::after{
-    width: 50%;
-} */

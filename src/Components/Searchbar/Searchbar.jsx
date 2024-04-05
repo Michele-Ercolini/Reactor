@@ -27,7 +27,7 @@ export default function Searchbar() {
 
         const promise = await fetch(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}&search=${search}&page_size=21`);
         const json = await promise.json();
-        console.log(json);
+        setSearch(()=> '');
         navigate('/search', { state: { games: json } });
     }
 
@@ -35,7 +35,7 @@ export default function Searchbar() {
 
     return (
         <div className={"searchBox d-flex justify-content-center align-items-center " + (isOpenSearchBtn ? 'active' : '')}>
-            <input className={(isOpenSearchBtn ? 'active' : '')} type="text" placeholder="Search" onChange={handleChange} />
+            <input className={(isOpenSearchBtn ? 'active' : '')} type="text" placeholder="Search" value={search} onChange={handleChange} />
             <div className={"searchBtn" + (isOpenSearchBtn ? ' active' : (dark ? ' bg-primaryColor' : ' bg-secondaryColor'))} onClick={!isOpenSearchBtn ? openSearchBtn : handleClick}>
                 <FaSearch />
             </div>

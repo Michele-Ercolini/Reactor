@@ -1,69 +1,97 @@
-/* navbar height 12vh -> 88vh disponibili -> 3 row da 28,3vh ~ 3 row da 28vh + margin*/
-
-.height28 {
-    height: 28vh;
-}
-
-.height56 {
-    height: 56vh;
-}
-
-.description_shadow {
-    border-radius: 50px;
-    background: transparent;
-    
-    overflow: hidden;
+.height21 {
+    height: 21vh;
     border: 2px solid var(--accent2Color);
-    margin: 1rem 1rem 0.3rem 1rem;
-    backdrop-filter: blur(10px);
-    color: var(--secondaryColor);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.height32 {
+    height: 32vh;
+    border: 2px solid var(--accent2Color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.height43 {
+    height: 43.5vh;
+    border: 2px solid var(--accent2Color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.height44 {
+    height: 44vh;
+    border: 2px solid var(--accent2Color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.height55 {
+    height: 55vh;
+    border: 2px solid var(--accent2Color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .description {
-    height: 56vh;
+    height: 53vh;
     overflow-y: scroll;
-    padding: 0.3rem 1rem 1rem 2rem;
+    padding: 1rem 1rem 1rem 2rem;
     font-size: 1.3rem;
 }
 
 .shadow_custom {
     border-radius: 50px;
-    box-shadow: inset -20px -20px 60px var(--accentColor),
-        inset 20px 20px 60px var(--accent2Color);
+    box-shadow: inset -10px -10px 20px transparent,
+        inset 10px 10px 20px var(--accent2Color);
 }
 
 /*  Reviews */
-.reviews_shadow {
-    border-radius: 50px;
-    box-shadow: inset -20px -20px 60px var(--accentColor),
-        inset 20px 20px 60px var(--accent2Color);
-    overflow: hidden;
-    border: 2px solid var(--accent2Color);
-    margin: 1rem 1rem 0.3rem 1rem;
-}
 
 .reviews_section {
-    height: 20vh;
+    height: 32vh;
     overflow-y: scroll;
     padding: 0.3rem 1rem 1rem 2rem;
     font-size: 1.3rem;
+}
+
+.form{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 .reviews_input {
     height: 2.5rem;
     border: 1px solid var(--accent2Color);
     width: 85%;
-    margin-left: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     font-size: 1.3rem;
 }
 
+.reviews_input:focus{
+    outline: none; 
+    border-color: var(--accent2Color); 
+    box-shadow: inset -5px 5px 10px transparent,
+        inset 0px -2px 5px var(--accent2Color);
+}
 .reviews_btn {
+    border: var(--accent2Color);
     background-color: var(--accent2Color);
     color: var(--secondaryColor);
     height: 2.5rem;
     width: 15%;
-    margin-right: 1rem;
+}
+
+.reviews_btn:hover{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 /* Scroll bar */
@@ -93,17 +121,8 @@
 
 /* Live Chat*/
 
-.chat_shadow {
-    border-radius: 50px;
-    box-shadow: inset -20px -20px 60px var(--accentColor),
-        inset 20px 20px 60px var(--accent2Color);
-    overflow: hidden;
-    border: 2px solid var(--accent2Color);
-    margin: 1rem 1rem 0.3rem 1rem;
-}
-
 .chat_section {
-    height: 47vh;
+    height: 43vh;
     overflow-y: scroll;
     padding: 0.3rem 1rem 1rem 2rem;
     font-size: 1.3rem;
@@ -113,45 +132,34 @@
     height: 2.5rem;
     border: 1px solid var(--accent2Color);
     width: 70%;
-    margin-left: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     font-size: 1.3rem;
 }
 
+.chat_input:focus{
+    outline: none; 
+    border-color: var(--accent2Color); 
+    box-shadow: inset -5px 5px 10px transparent,
+        inset 0px -2px 5px var(--accent2Color);
+}
+
 .chat_btn {
+    border: var(--accent2Color);
     background-color: var(--accent2Color);
     color: var(--secondaryColor);
     height: 2.5rem;
     width: 30%;
-    margin-right: 1rem;
+}
+
+.chat_btn:hover{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .chat_img {
     height: 40px;
     width: 40px;
     margin-left: 1rem;
-}
-
-.chat_height {
-    height: 56vh;
-}
-
-/* info */
-
-.inf_section {
-    height: 25vh;
-    border: 2px solid var(--accent2Color);
-    margin: 1rem;
-    padding: 0.3rem 1rem 1rem 2rem;
-    font-size: 1.3rem;
-}
-
-.inf_section a {
-    font-size: 1.3rem;
-}
-
-.genres a {
-    font-size: 1.5rem;
 }
 
 /* Buttons */
@@ -172,40 +180,3 @@
     --bs-gradient: none;
 }
 
-/* Swiper */
-
-.slide {
-    width: 70%;
-}
-
-@media screen and (max-width:767px) {
-    .description {
-        height: 26vh;
-        font-size: 1rem;
-        padding: 0.3rem 1rem 1rem 1rem;
-    }
-
-    .reviews_section {
-        font-size: 1rem;
-        padding: 0.3rem 1rem 1rem 1rem;
-    }
-
-    .chat_height {
-        height: 28vh;
-    }
-
-    .chat_section {
-        height: 20vh;
-        font-size: 1rem;
-        padding: 0.3rem 1rem 1rem 1rem;
-    }
-
-    .inf_section {
-        font-size: 1rem;
-        padding: 0.3rem 1rem 1rem 1rem;
-    }
-
-    .inf_section a {
-        font-size: 1rem;
-    }
-}
